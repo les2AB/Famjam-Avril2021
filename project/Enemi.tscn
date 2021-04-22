@@ -1,7 +1,8 @@
 [gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://assets/img/game_2/sprite_ennemi_marche_32x32.png" type="Texture" id=1]
-[ext_resource path="res://game_2_Enemi.gd" type="Script" id=2]
+[ext_resource path="res://scenes/game_2_Enemi.gd" type="Script" id=2]
+
 
 
 [sub_resource type="AtlasTexture" id=2]

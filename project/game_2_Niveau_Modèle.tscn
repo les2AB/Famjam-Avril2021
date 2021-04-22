@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://scenes/game_2_Musiques.tscn" type="PackedScene" id=1]
+
+[node name="Niveau xxx" type="Node2D"]
+
+[node name="Décorts" type="Node2D" parent="."]
+
+[node name="Plateformes" type="TileMap" parent="Décorts"]
+cell_size = Vector2( 16, 16 )
+format = 1
+
+[node name="Sol" type="TileMap" parent="Décorts"]
+cell_size = Vector2( 16, 16 )
+format = 1
+
+[node name="Musiques" parent="." instance=ExtResource( 1 )]
