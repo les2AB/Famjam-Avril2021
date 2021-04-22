@@ -1,5 +1,6 @@
 extends Sprite
 
+export (int) var game_index = 1
 
 # signal émis par la scène
 # 
@@ -8,5 +9,6 @@ extends Sprite
 func _on_Area2D_body_entered(_body):
 	var arcade= get_parent()
 	var world = arcade.get_parent()
-	world.on_game_start(1)
+	
+	world.on_game_start(game_index)
 	arcade.queue_free()

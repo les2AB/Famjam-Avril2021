@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/musique_part3.wav-2da94af2a9d914f9228f8888d7222286.sample"
+
+[deps]
+
+source_file="res://assets/sounds/game_2/musique_part3.wav"
+dest_files=[ "res://.import/musique_part3.wav-2da94af2a9d914f9228f8888d7222286.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

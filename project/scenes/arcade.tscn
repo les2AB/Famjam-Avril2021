@@ -13,7 +13,11 @@ texture = ExtResource( 4 )
 centered = false
 
 [node name="BorneJeu1" parent="." instance=ExtResource( 2 )]
-position = Vector2( 435.249, 292.967 )
+position = Vector2( 271.249, 162.967 )
+
+[node name="BorneJeu2" parent="." instance=ExtResource( 2 )]
+position = Vector2( 599.405, 163.513 )
+game_index = 2
 
 [node name="KidPaddle" parent="." instance=ExtResource( 1 )]
 position = Vector2( 127.173, 309.02 )
