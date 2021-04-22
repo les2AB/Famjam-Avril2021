@@ -1,0 +1,36 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://game2/scripts/musiques.gd" type="Script" id=1]
+[ext_resource path="res://game2/sounds/musiques/musique_part 4.wav" type="AudioStream" id=2]
+[ext_resource path="res://game2/sounds/musiques/musique_part 2.wav" type="AudioStream" id=3]
+[ext_resource path="res://game2/sounds/musiques/musique_part 1.wav" type="AudioStream" id=4]
+[ext_resource path="res://game2/sounds/musiques/musique_part 3.wav" type="AudioStream" id=5]
+
+
+[node name="Musiques" type="Control"]
+margin_right = 40.0
+margin_bottom = 40.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Musique_partie_1" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
+volume_db = -30.0
+
+[node name="Musique_partie_2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+volume_db = -30.0
+
+[node name="Musique_partie_3" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 5 )
+volume_db = -30.0
+
+[node name="Musique_partie_4" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 2 )
+volume_db = -30.0
+[connection signal="finished" from="Musique_partie_1" to="." method="_on_Musique_partie_1_finished"]
+[connection signal="finished" from="Musique_partie_2" to="." method="_on_Musique_partie_2_finished"]
+[connection signal="finished" from="Musique_partie_3" to="." method="_on_Musique_partie_3_finished"]
+[connection signal="finished" from="Musique_partie_4" to="." method="_on_Musique_partie_3_finished"]

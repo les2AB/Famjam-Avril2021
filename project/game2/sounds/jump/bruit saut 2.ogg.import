@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/bruit saut 2.ogg-b88ddbc70ed65ca90d22bf641132dcdf.oggstr"
+
+[deps]
+
+source_file="res://game2/sounds/jump/bruit saut 2.ogg"
+dest_files=[ "res://.import/bruit saut 2.ogg-b88ddbc70ed65ca90d22bf641132dcdf.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

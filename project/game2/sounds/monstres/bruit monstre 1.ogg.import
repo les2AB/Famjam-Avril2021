@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/bruit monstre 1.ogg-280ac385facfb4018958d0c274ba32a2.oggstr"
+
+[deps]
+
+source_file="res://game2/sounds/monstres/bruit monstre 1.ogg"
+dest_files=[ "res://.import/bruit monstre 1.ogg-280ac385facfb4018958d0c274ba32a2.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

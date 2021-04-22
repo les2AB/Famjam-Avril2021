@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/coups4.wav-cdfdc2cf42e8f1553abd87319c67055f.sample"
+
+[deps]
+
+source_file="res://game1/sounds/coups4.wav"
+dest_files=[ "res://.import/coups4.wav-cdfdc2cf42e8f1553abd87319c67055f.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

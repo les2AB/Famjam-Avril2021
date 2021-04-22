@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/bruit de pièce 3.ogg-29f0f24c49ed8babfa19f5f619857b6c.oggstr"
+
+[deps]
+
+source_file="res://game2/sounds/pieces/bruit de pièce 3.ogg"
+dest_files=[ "res://.import/bruit de pièce 3.ogg-29f0f24c49ed8babfa19f5f619857b6c.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0
