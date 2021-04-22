@@ -21,30 +21,51 @@ func _ready():
 
 
 func _physics_process(_delta):
-	if Input.is_action_pressed("ui_right"):
-		audio_pas.stream_paused = false
-		$AnimatedSprite.flip_h = false
-		$AnimatedSprite.play("walk")
-		motion.x = SPEED
-	elif Input.is_action_pressed("ui_left"):
-		audio_pas.stream_paused = false
-		$AnimatedSprite.flip_h = true
-		$AnimatedSprite.play("walk")
-		motion.x = -SPEED
-	elif Input.is_action_pressed("ui_up"):
-		audio_pas.stream_paused = false
-		$AnimatedSprite.play("walk")
-		motion.y = -SPEED
-	elif Input.is_action_pressed("ui_down"):
-		audio_pas.stream_paused = false
-		$AnimatedSprite.play("walk")
-		motion.y = SPEED	
-	else:
-		audio_pas.stream_paused = true
-		motion.x = 0
-		motion.y = 0
-		$AnimatedSprite.play("idle")
-		pass
+	# if Input.is_action_pressed("ui_right"):
+	# 	audio_pas.stream_paused = false
+	# 	$AnimatedSprite.flip_h = false
+	# 	$AnimatedSprite.play("walk")
+	# 	motion.x = SPEED
+	# elif Input.is_action_pressed("ui_left"):
+	# 	audio_pas.stream_paused = false
+	# 	$AnimatedSprite.flip_h = true
+	# 	$AnimatedSprite.play("walk")
+	# 	motion.x = -SPEED
+	# elif Input.is_action_pressed("ui_up"):
+	# 	audio_pas.stream_paused = false
+	# 	$AnimatedSprite.play("walk")
+	# 	motion.y = -SPEED
+	# elif Input.is_action_pressed("ui_down"):
+	# 	audio_pas.stream_paused = false
+	# 	$AnimatedSprite.play("walk")
+	# 	motion.y = SPEED	
+	# else:
+	# 	audio_pas.stream_paused = true
+	# 	motion.x = 0
+	# 	motion.y = 0
+	# 	$AnimatedSprite.play("idle")
+	# 	pass
 		
-	var _vscode_ = move_and_slide(motion, FLOOR_NORMAL)	
+	motion.x = 0
+	motion.y = 0
+
+	if Input.is_action_pressed("ui_right"):
+		$AnimatedSprite.flip_h = false
+		motion.x = SPEED	
+	if Input.is_action_pressed("ui_left") :
+		$AnimatedSprite.flip_h = true
+		motion.x = -SPEED
+	if Input.is_action_pressed("ui_up") :
+		motion.y = -SPEED
+	if Input.is_action_pressed("ui_down") :
+		motion.y = SPEED
+
+	if motion == Vector2(0,0):
+		$AnimatedSprite.play("idle")
+		audio_pas.stream_paused = true
+	else:
+		$AnimatedSprite.play("walk")
+		audio_pas.stream_paused = false
+		var _ignore = move_and_slide(motion, FLOOR_NORMAL)
+	# var _vscode_ = move_and_slide(motion, FLOOR_NORMAL)	
 		

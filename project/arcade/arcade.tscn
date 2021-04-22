@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://arcade/scènes/arcade_KidPaddle.tscn" type="PackedScene" id=1]
 [ext_resource path="res://arcade/scènes/arcade_BorneJeu1.tscn" type="PackedScene" id=2]
 [ext_resource path="res://arcade/sounds/arcade_music.wav" type="AudioStream" id=3]
 [ext_resource path="res://arcade/img/background.jpg" type="Texture" id=4]
+[ext_resource path="res://arcade/img/borne_arcade_2_192x192 .png" type="Texture" id=5]
 
 [node name="arcade" type="Node2D"]
 modulate = Color( 0.815686, 0.596078, 0.596078, 1 )
@@ -11,18 +12,27 @@ modulate = Color( 0.815686, 0.596078, 0.596078, 1 )
 [node name="Fond" type="Sprite" parent="."]
 texture = ExtResource( 4 )
 centered = false
-
-[node name="BorneJeu1" parent="." instance=ExtResource( 2 )]
-position = Vector2( 271.249, 162.967 )
-
-[node name="BorneJeu2" parent="." instance=ExtResource( 2 )]
-position = Vector2( 599.405, 163.513 )
-game_index = 2
-
-[node name="KidPaddle" parent="." instance=ExtResource( 1 )]
-position = Vector2( 127.173, 309.02 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
 
 [node name="Audio" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 3 )
 volume_db = -15.0
 autoplay = true
+
+[node name="YSort" type="YSort" parent="."]
+
+[node name="KidPaddle" parent="YSort" instance=ExtResource( 1 )]
+position = Vector2( 127.173, 309.02 )
+
+[node name="BorneJeu2" parent="YSort" instance=ExtResource( 2 )]
+position = Vector2( 647.459, 411.793 )
+scale = Vector2( 1.02781, 1.02781 )
+texture = ExtResource( 5 )
+game_index = 2
+
+[node name="BorneJeu1" parent="YSort" instance=ExtResource( 2 )]
+position = Vector2( 199.835, 150.286 )
+scale = Vector2( 0.840097, 0.840097 )
