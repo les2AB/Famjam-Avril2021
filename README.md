@@ -2,7 +2,7 @@
 
 22 Avril 2021 - Les2AB présente : **Mario Like**
 
-[Jouer maintenant !](https://pskalou.github.io/famjam2)
+[Jouer maintenant !](https://les2ab.github.io/Famjam-Avril2021)
 
 
 
