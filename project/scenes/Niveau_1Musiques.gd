@@ -27,7 +27,7 @@ func play_musique(old_index, new_index):
 		print (new_index)
 
 		# joue entre 4 et 8 boucles
-		nb_boucle = 4 + randi() % 5
+		nb_boucle = 1 + randi() % 5
 		boucle_index= 0
 
 	morceau.playing = false
@@ -35,7 +35,7 @@ func play_musique(old_index, new_index):
 	morceau.playing = true
 
 func gere_parties(part_id):
-	print ('musique part",part_id," finie')
+	print ("musique part",part_id," finie")
 	boucle_index += 1
 	if boucle_index >= nb_boucle:
 		# print ('change')

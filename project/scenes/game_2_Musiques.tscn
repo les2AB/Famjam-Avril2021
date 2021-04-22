@@ -1,28 +1,28 @@
 [gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://assets/sounds/game_2/musique_part3.wav" type="AudioStream" id=1]
-[ext_resource path="res://assets/sounds/game_2/musique_part1.wav" type="AudioStream" id=2]
-[ext_resource path="res://assets/sounds/game_2/musique_part2.wav" type="AudioStream" id=3]
-[ext_resource path="res://scenes/Niveau_1Musiques.gd" type="Script" id=4]
+[ext_resource path="res://scenes/Niveau_1Musiques.gd" type="Script" id=1]
+[ext_resource path="res://assets/sounds/game_2/musique_part2.wav" type="AudioStream" id=2]
+[ext_resource path="res://assets/sounds/game_2/musique_part3.wav" type="AudioStream" id=3]
+[ext_resource path="res://assets/sounds/game_2/musique_part1.wav" type="AudioStream" id=4]
 
 [node name="Musiques" type="Control"]
 margin_right = 40.0
 margin_bottom = 40.0
-script = ExtResource( 4 )
+script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Musique_partie_1" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 2 )
+stream = ExtResource( 4 )
 volume_db = -30.0
 
 [node name="Musique_partie_2" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 3 )
+stream = ExtResource( 2 )
 volume_db = -30.0
 
 [node name="Musique_partie_3" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 1 )
+stream = ExtResource( 3 )
 volume_db = -30.0
 [connection signal="finished" from="Musique_partie_1" to="." method="_on_Musique_partie_1_finished"]
 [connection signal="finished" from="Musique_partie_2" to="." method="_on_Musique_partie_2_finished"]

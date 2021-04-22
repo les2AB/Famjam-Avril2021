@@ -91,4 +91,12 @@ func _physics_process(delta):
 		# print ("IDLE")
 
 
-		
+
+func _on_Corps_body_shape_entered(body_id:int, body:Node, body_shape:int, area_shape:int):
+	if body != self:
+		print ("contact avec ", body.name)
+		mourir()
+
+
+func mourir():
+	print ("Princesse meurt")

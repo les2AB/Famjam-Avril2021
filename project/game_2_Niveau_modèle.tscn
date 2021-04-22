@@ -1,0 +1,28 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://scenes/game2_tuiles/tuiles_Plateformes.tres" type="TileSet" id=1]
+[ext_resource path="res://scenes/game_2_Musiques.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scenes/game2_tuiles/tuiles_Sol.tres" type="TileSet" id=3]
+[ext_resource path="res://game_2_Princesse.tscn" type="PackedScene" id=4]
+[ext_resource path="res://game_2_Enemi.gd" type="Script" id=5]
+
+[node name="Niveau 2" type="Node2D"]
+script = ExtResource( 5 )
+
+[node name="Décorts" type="Node2D" parent="."]
+
+[node name="Plateforme" type="TileMap" parent="Décorts"]
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 16, 16 )
+cell_custom_transform = Transform2D( 32, 0, 0, 32, 0, 0 )
+format = 1
+tile_data = PoolIntArray( 458739, 0, 0, 458740, 0, 0, 458741, 0, 0, 458742, 0, 0, 458743, 0, 0, 458744, 0, 0, 458745, 0, 0, 458746, 0, 0, 458747, 0, 0, 458748, 0, 0, 458749, 0, 0, 458750, 0, 0, 458751, 0, 0, 393216, 0, 0, 393217, 0, 0, 393218, 0, 0, 393219, 0, 0, 393220, 0, 0, 393221, 0, 0, 393222, 0, 0, 393223, 0, 0, 393224, 0, 0, 393225, 0, 0, 393226, 0, 0, 393227, 0, 0, 393228, 0, 0, 393229, 0, 0, 393230, 0, 0, 393231, 0, 0, 393232, 0, 0, 393233, 0, 0 )
+
+[node name="Sol" type="TileMap" parent="Décorts"]
+tile_set = ExtResource( 3 )
+cell_size = Vector2( 16, 16 )
+format = 1
+
+[node name="Musiques" parent="." instance=ExtResource( 2 )]
+
+[node name="Princesse" parent="." instance=ExtResource( 4 )]
