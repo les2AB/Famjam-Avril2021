@@ -6,6 +6,7 @@
 [ext_resource path="res://game2/scenes/princesse.tscn" type="PackedScene" id=4]
 [ext_resource path="res://game2/scenes/ennemi.tscn" type="PackedScene" id=5]
 
+
 [node name="Niveau xxx" type="Node2D"]
 
 [node name="Décorts" type="Node2D" parent="."]
