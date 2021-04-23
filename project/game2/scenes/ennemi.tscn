@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=2]
+[gd_scene load_steps=24 format=2]
 
 [ext_resource path="res://game2/img/blork/sprite_blork_marche.png" type="Texture" id=1]
 [ext_resource path="res://game2/img/blork/blork meurt.png" type="Texture" id=2]
@@ -103,49 +103,29 @@ animations = [ {
 } ]
 
 [sub_resource type="RectangleShape2D" id=19]
-extents = Vector2( 14.5105, 10 )
+extents = Vector2( 4.85345, 2.29926 )
 
 [sub_resource type="RectangleShape2D" id=20]
-extents = Vector2( 11.7258, 5.97528 )
-
-[sub_resource type="RectangleShape2D" id=21]
-
-[sub_resource type="RectangleShape2D" id=22]
-extents = Vector2( 17.9691, 10 )
+extents = Vector2( 10.9838, 7.97719 )
 
 [node name="Enemi" type="KinematicBody2D"]
 script = ExtResource( 3 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( 0.10511, 0 )
 frames = SubResource( 18 )
 animation = "marche"
+frame = 9
 playing = true
 
-[node name="Contact corps" type="CollisionShape2D" parent="."]
-position = Vector2( 0.0787449, 3.40141 )
+[node name="CollisionCorps" type="CollisionShape2D" parent="."]
+position = Vector2( -1.00259, 10.3036 )
 shape = SubResource( 19 )
 
-[node name="Tete" type="Area2D" parent="."]
-visible = false
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Tete"]
-position = Vector2( -0.297302, -13.6759 )
-shape = SubResource( 20 )
-
-[node name="Pieds" type="Area2D" parent="."]
-visible = false
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Pieds"]
-position = Vector2( -0.297302, 9.81096 )
-shape = SubResource( 21 )
-
 [node name="Corps" type="Area2D" parent="."]
-visible = false
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Corps"]
-position = Vector2( -0.297302, 5.05413 )
-shape = SubResource( 22 )
+[node name="CollisionCorps" type="CollisionShape2D" parent="Corps"]
+position = Vector2( -3.58727, -1.48332 )
+shape = SubResource( 20 )
 [connection signal="animation_finished" from="AnimatedSprite" to="." method="_on_AnimatedSprite_animation_finished"]
-[connection signal="body_entered" from="Tete" to="." method="_on_Area2D_body_entered"]
-[connection signal="body_entered" from="Pieds" to="." method="_on_Pieds_body_entered"]
-[connection signal="body_entered" from="Corps" to="." method="_on_Corps_body_entered"]
+[connection signal="body_entered" from="Corps" to="." method="_on_Area2D_body_entered"]
