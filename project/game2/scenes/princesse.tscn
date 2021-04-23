@@ -410,7 +410,7 @@ offset = Vector2( 2048, 0 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 65 )
 animation = "idle"
-frame = 2
+frame = 1
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -428,5 +428,5 @@ shape = SubResource( 67 )
 [node name="CollisionTete" type="CollisionShape2D" parent="Tete"]
 position = Vector2( -2.19045, -5.40412 )
 shape = SubResource( 68 )
-[connection signal="body_shape_entered" from="Corps" to="." method="_on_Corps_body_shape_entered"]
-[connection signal="body_entered" from="Tete" to="." method="_on_Pieds_body_entered"]
+[connection signal="body_entered" from="Corps" to="." method="_on_Corps_body_entered"]
+[connection signal="body_entered" from="Tete" to="." method="_on_Tete_body_entered"]
