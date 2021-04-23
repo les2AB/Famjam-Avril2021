@@ -16,6 +16,10 @@ const GRAVITY = 980
 	
 var is_alive
 var is_ui_key_jump_release
+
+var points = 0
+var vie = 3
+
 func _ready():
 	is_ui_key_jump_release= true
 	is_alive = true
