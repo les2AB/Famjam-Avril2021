@@ -369,10 +369,10 @@ animations = [ {
 } ]
 
 [sub_resource type="RectangleShape2D" id=66]
-extents = Vector2( 2.76481, 1.5324 )
+extents = Vector2( 2.98756, 1.421 )
 
 [sub_resource type="RectangleShape2D" id=67]
-extents = Vector2( 5.60247, 5.98011 )
+extents = Vector2( 5.49115, 6.64827 )
 
 [sub_resource type="RectangleShape2D" id=68]
 extents = Vector2( 4.76572, 2.5873 )
@@ -414,17 +414,17 @@ offset = Vector2( 2048, 0 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 65 )
 animation = "idle"
-frame = 1
+frame = 7
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( -1.67044, 13.8089 )
+position = Vector2( -1.67044, 13.5862 )
 shape = SubResource( 66 )
 
 [node name="Corps" type="Area2D" parent="."]
 
 [node name="CollisionCorps" type="CollisionShape2D" parent="Corps"]
-position = Vector2( -2.28086, 4.7818 )
+position = Vector2( -2.28086, 4.44771 )
 shape = SubResource( 67 )
 
 [node name="Tete" type="Area2D" parent="."]
