@@ -8,9 +8,10 @@ extends KinematicBody2D
 
 var screen_size : Vector2
  
-const GRAVITY = 2000
+const FLOOR_NORMAL = Vector2(0,-1)
+const GRAVITY = 980
 const SPEED = 200
-const JUMP_FORCE = -1000
+const JUMP_FORCE = -600
 	
 # var state = IDLE
 # enum {IDLE,MARCHE,SAUTE, SAUTE_UP, SAUTE_DOWN}
@@ -28,35 +29,42 @@ var velocity= Vector2()
 
 
 func gravity(delta):
+
 	if is_on_floor():
-		print("on floor")
+		
 		velocity.y = 0
+
 	else :
-		print("not on floor")
 		velocity.y += GRAVITY * delta
+		
+
 
 func jump():
+
 	if is_on_floor() and Input.is_action_pressed("ui_up"):
-		print("saute")
 		velocity.y = JUMP_FORCE
+		
+
 	if velocity.y < 0:
+		print(velocity.y)
 		$AnimatedSprite.play("saute")
 
 func walk():
-	if Input.is_action_pressed("ui_up"):
-		print("saute")
-
-	if Input.is_action_pressed("ui_right") :
-		print("marche Droite")
-		$AnimatedSprite.play("marche")
-		$AnimatedSprite.flip_h = false
-		velocity.x = SPEED
 
 	if Input.is_action_pressed("ui_left") :
 		print("marche G")
 		$AnimatedSprite.play("marche")
 		$AnimatedSprite.flip_h = true
-		velocity.x = - SPEED
+		velocity.x = -SPEED
+
+	elif Input.is_action_pressed("ui_right") :
+		print("marche Droite")
+		$AnimatedSprite.play("marche")
+		$AnimatedSprite.flip_h = false
+		velocity.x = SPEED
+
+	
+
 	else :
 		$AnimatedSprite.play("idle")
 		velocity.x = 0
@@ -66,6 +74,7 @@ func _physics_process(delta):
 	gravity(delta)
 	walk()
 	jump()
+	move_and_slide(velocity, FLOOR_NORMAL)
 
 	# var direction =Vector2(0,0)
 	# if Input.is_action_pressed("ui_right") :
@@ -114,7 +123,7 @@ func _physics_process(delta):
 
 
 
-	var _ignore = move_and_slide(velocity, Vector2(0,1))
+	# var _ignore = move_and_slide(velocity, Vector2(0,1))
 
 
 
