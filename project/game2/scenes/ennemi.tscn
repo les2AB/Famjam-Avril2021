@@ -1,8 +1,13 @@
-[gd_scene load_steps=24 format=2]
+[gd_scene load_steps=29 format=2]
 
 [ext_resource path="res://game2/img/blork/sprite_blork_marche.png" type="Texture" id=1]
 [ext_resource path="res://game2/img/blork/blork meurt.png" type="Texture" id=2]
 [ext_resource path="res://game2/scripts/ennemi.gd" type="Script" id=3]
+[ext_resource path="res://game2/sounds/monstres/bruit monstre 1.ogg" type="AudioStream" id=4]
+[ext_resource path="res://game2/scenes/EnnemiAudioControl.gd" type="Script" id=5]
+[ext_resource path="res://game2/sounds/monstres/bruit monstre 3.ogg" type="AudioStream" id=6]
+[ext_resource path="res://game2/sounds/monstres/bruit monstre 4.ogg" type="AudioStream" id=7]
+[ext_resource path="res://game2/sounds/monstres/bruit monstre 2.ogg" type="AudioStream" id=8]
 
 [sub_resource type="AtlasTexture" id=1]
 flags = 4
@@ -97,16 +102,16 @@ animations = [ {
 "speed": 15.0
 }, {
 "frames": [ SubResource( 11 ), SubResource( 12 ), SubResource( 13 ), SubResource( 14 ), SubResource( 15 ), SubResource( 16 ), SubResource( 17 ) ],
-"loop": true,
+"loop": false,
 "name": "meurt",
 "speed": 7.0
 } ]
 
 [sub_resource type="RectangleShape2D" id=19]
-extents = Vector2( 10.5014, 9.88362 )
+extents = Vector2( 12.9189, 9.88362 )
 
 [sub_resource type="RectangleShape2D" id=20]
-extents = Vector2( 15.819, 6.19029 )
+extents = Vector2( 10.7735, 7.34657 )
 
 [node name="Ennemi" type="KinematicBody2D"]
 script = ExtResource( 3 )
@@ -115,19 +120,43 @@ script = ExtResource( 3 )
 position = Vector2( 0.10511, 0 )
 frames = SubResource( 18 )
 animation = "marche"
+frame = 5
 playing = true
 
 [node name="Move_collision" type="CollisionShape2D" parent="."]
-position = Vector2( -3.42017, 2.9458 )
+position = Vector2( -1.63326, 3.36625 )
 shape = SubResource( 19 )
 
 [node name="Hit_collision" type="Area2D" parent="."]
-visible = false
 
 [node name="CollisionCorps" type="CollisionShape2D" parent="Hit_collision"]
-visible = false
-position = Vector2( 0.722334, -0.642421 )
+position = Vector2( -2.74636, -0.642419 )
 shape = SubResource( 20 )
+
+[node name="EnnemiAudioControl" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="scream1" type="AudioStreamPlayer2D" parent="EnnemiAudioControl"]
+stream = ExtResource( 4 )
+volume_db = -10.0
+
+[node name="scream2" type="AudioStreamPlayer2D" parent="EnnemiAudioControl"]
+stream = ExtResource( 8 )
+volume_db = -10.0
+
+[node name="scream3" type="AudioStreamPlayer2D" parent="EnnemiAudioControl"]
+stream = ExtResource( 6 )
+volume_db = -10.0
+attenuation = 0.68302
+
+[node name="scream4" type="AudioStreamPlayer2D" parent="EnnemiAudioControl"]
+stream = ExtResource( 7 )
+volume_db = -10.0
 [connection signal="input_event" from="." to="." method="_on_Enemi_input_event"]
 [connection signal="animation_finished" from="AnimatedSprite" to="." method="_on_AnimatedSprite_animation_finished"]
 [connection signal="body_entered" from="Hit_collision" to="." method="_on_Hit_collision_body_entered"]

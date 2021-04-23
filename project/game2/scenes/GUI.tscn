@@ -5,13 +5,13 @@
 [ext_resource path="res://game2/scripts/GUI.gd" type="Script" id=3]
 [ext_resource path="res://assets/fonts/kenney_fontpackage/Fonts/Kenney Mini Square.ttf" type="DynamicFontData" id=4]
 
-[sub_resource type="DynamicFont" id=1]
+[sub_resource type="DynamicFont" id=2]
 size = 25
 use_mipmaps = true
 use_filter = true
 font_data = ExtResource( 4 )
 
-[sub_resource type="DynamicFont" id=2]
+[sub_resource type="DynamicFont" id=1]
 size = 25
 use_mipmaps = true
 use_filter = true
@@ -20,13 +20,13 @@ font_data = ExtResource( 4 )
 [node name="CanvasLayer" type="CanvasLayer"]
 script = ExtResource( 3 )
 
-[node name="Points_score" type="Label" parent="."]
-margin_left = 43.1784
-margin_top = 3.35677
-margin_right = 81.1784
-margin_bottom = 35.3568
-custom_fonts/font = SubResource( 1 )
-text = "10"
+[node name="Vies_score" type="Label" parent="."]
+margin_left = 47.1784
+margin_top = 30.8162
+margin_right = 63.1784
+margin_bottom = 62.8162
+custom_fonts/font = SubResource( 2 )
+text = "3"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -43,13 +43,13 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Vies_score" type="Label" parent="."]
-margin_left = 47.1784
-margin_top = 30.8162
-margin_right = 63.1784
-margin_bottom = 62.8162
-custom_fonts/font = SubResource( 2 )
-text = "3"
+[node name="Points_score" type="Label" parent="."]
+margin_left = 43.1784
+margin_top = 3.35677
+margin_right = 81.1784
+margin_bottom = 35.3568
+custom_fonts/font = SubResource( 1 )
+text = "10"
 __meta__ = {
 "_edit_use_anchors_": false
 }
