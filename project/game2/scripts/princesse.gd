@@ -1,6 +1,6 @@
 extends KinematicBody2D
 
-export (int) var speed : int = 200
+export (int) var speed : int = 150
 export (int) var jump_force = -300
 
 
