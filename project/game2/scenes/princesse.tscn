@@ -379,10 +379,6 @@ extents = Vector2( 4.76572, 2.5873 )
 
 [node name="Princesse" type="KinematicBody2D"]
 script = ExtResource( 1 )
-speed = 50
-gravity = -2500
-start_jump = -350
-max_jump = 35
 
 [node name="Camera2D" type="Camera2D" parent="."]
 current = true
@@ -414,7 +410,7 @@ offset = Vector2( 2048, 0 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 65 )
 animation = "idle"
-frame = 7
+frame = 2
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
