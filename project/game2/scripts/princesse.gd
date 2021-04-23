@@ -10,7 +10,9 @@ const FLOOR_NORMAL = Vector2(0,-1)
 const GRAVITY = 980
 	
 var is_alive
+var is_ui_key_jump_release
 func _ready():
+	is_ui_key_jump_release= true
 	is_alive = true
 	self.screen_size = get_viewport_rect().size
 
@@ -30,25 +32,26 @@ func gravity(delta):
 
 
 func jump():
+	if is_ui_key_jump_release and is_on_floor() and (Input.is_action_pressed("ui_up") or Input.is_action_pressed("ui_accept")):
 
-	if is_on_floor() and Input.is_action_pressed("ui_up"):
+		is_ui_key_jump_release= false
 		velocity.y = jump_force
 		
 
 	if velocity.y < 0:
-		print(velocity.y)
+		# print(velocity.y)
 		$AnimatedSprite.play("saute")
 
 func walk():
 
 	if Input.is_action_pressed("ui_left") :
-		print("marche G")
+		# print("marche G")
 		$AnimatedSprite.play("marche")
 		$AnimatedSprite.flip_h = true
 		velocity.x = -speed
 
 	elif Input.is_action_pressed("ui_right") :
-		print("marche Droite")
+		# print("marche Droite")
 		$AnimatedSprite.play("marche")
 		$AnimatedSprite.flip_h = false
 		velocity.x = speed
@@ -65,6 +68,10 @@ func _physics_process(delta):
 
 	gravity(delta)
 	walk()
+
+	if Input.is_action_just_released("ui_accept"):
+		is_ui_key_jump_release= true
+
 	jump()
 	var _ignore = move_and_slide(velocity, FLOOR_NORMAL)
 
@@ -83,7 +90,7 @@ func _on_Corps_body_entered(body):
 func mourir():
 	is_alive= false
 	$AnimatedSprite.play("meurt")
-	print ("Princesse meurt")
+	# print ("Princesse meurt")
 	# attendre la fin de l'animation et quitter
 	yield($AnimatedSprite, 'animation_finished')
 	var _ignore= get_tree().change_scene("res://game2/scenes/game_over.tscn")
