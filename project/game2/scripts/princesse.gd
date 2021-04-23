@@ -9,8 +9,9 @@ var screen_size : Vector2
 const FLOOR_NORMAL = Vector2(0,-1)
 const GRAVITY = 980
 	
- 
+var is_alive
 func _ready():
+	is_alive = true
 	self.screen_size = get_viewport_rect().size
 
 
@@ -59,22 +60,36 @@ func walk():
 
 
 func _physics_process(delta):
+	if not is_alive:
+		return
+
 	gravity(delta)
 	walk()
 	jump()
-	move_and_slide(velocity, FLOOR_NORMAL)
+	var _ignore = move_and_slide(velocity, FLOOR_NORMAL)
+
 
 
 func _on_Corps_body_entered(body):
-	if body != self:
-		print ("contact avec ", body.name)
+	if body == self:
+		return
+
+	print (self.name, " : contact corps avec ", body.name)
+	
+	if 'ennemis' in body.get_groups():
 		mourir()
 
 
 func mourir():
+	is_alive= false
 	$AnimatedSprite.play("meurt")
 	print ("Princesse meurt")
+	# attendre la fin de l'animation et quitter
+	yield($AnimatedSprite, 'animation_finished')
+	var _ignore= get_tree().change_scene("res://game2/scenes/game_over.tscn")
 
 
 func _on_Tete_body_entered(body:Node):
-	pass
+	if body != self:
+		print (self.name, " : contact pied avec ", body.name)
+

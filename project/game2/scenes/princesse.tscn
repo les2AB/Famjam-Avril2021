@@ -352,8 +352,8 @@ animations = [ {
 "name": "attente",
 "speed": 5.0
 }, {
-"frames": [ SubResource( 43 ), SubResource( 44 ), SubResource( 45 ), SubResource( 46 ), SubResource( 47 ), SubResource( 48 ), SubResource( 49 ), SubResource( 50 ), SubResource( 51 ), SubResource( 52 ), SubResource( 53 ), SubResource( 54 ), SubResource( 55 ) ],
-"loop": true,
+"frames": [ SubResource( 43 ), SubResource( 44 ), SubResource( 45 ), SubResource( 46 ), SubResource( 47 ), SubResource( 48 ), SubResource( 49 ), SubResource( 50 ), SubResource( 51 ), SubResource( 52 ), SubResource( 53 ), SubResource( 54 ), SubResource( 55 ), SubResource( 55 ), SubResource( 55 ), SubResource( 55 ), SubResource( 55 ), SubResource( 55 ), SubResource( 55 ), SubResource( 55 ), SubResource( 55 ) ],
+"loop": false,
 "name": "meurt",
 "speed": 15.0
 }, {
@@ -391,6 +391,7 @@ scroll_base_offset = Vector2( 0, 200 )
 motion_scale = Vector2( 0.3, 0.3 )
 
 [node name="Sprite" type="Sprite" parent="Camera2D/ParallaxBackground/ParallaxLayer"]
+position = Vector2( -0.111362, -0.111362 )
 texture = ExtResource( 6 )
 
 [node name="ParallaxLayer2" type="ParallaxLayer" parent="Camera2D/ParallaxBackground"]

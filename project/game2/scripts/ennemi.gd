@@ -7,7 +7,10 @@ export (int) var gravity = -981
 
 
 var velocity= Vector2.ZERO
+
+
 func _ready():
+	add_to_group('ennemis')
 	velocity.y += 0
 	velocity.x= -1 * self.speed
 	$AnimatedSprite.flip_h = false
@@ -54,5 +57,5 @@ func _on_AnimatedSprite_animation_finished():
 
 func _on_Hit_collision_body_entered(body):
 	if body != self:
-		print (self, " Hit_collision par : ", body.name)
+		print (self.name, " Hit_collision par : ", body.name)
 		pass # Replace with function body.
