@@ -9,6 +9,7 @@ extends KinematicBody2D
 var screen_size : Vector2
  
 const GRAVITY = 2000
+const SPEED = 200
 const JUMP_FORCE = -1000
 	
 # var state = IDLE
@@ -28,18 +29,42 @@ var velocity= Vector2()
 
 func gravity(delta):
 	if is_on_floor():
+		print("on floor")
 		velocity.y = 0
 	else :
+		print("not on floor")
 		velocity.y += GRAVITY * delta
 
 func jump():
-	if is_on_floor() and Input.is_action_pressed("jump"):
+	if is_on_floor() and Input.is_action_pressed("ui_up"):
+		print("saute")
 		velocity.y = JUMP_FORCE
 	if velocity.y < 0:
-		$AnimatedSprite.play("jump")
+		$AnimatedSprite.play("saute")
+
+func walk():
+	if Input.is_action_pressed("ui_up"):
+		print("saute")
+
+	if Input.is_action_pressed("ui_right") :
+		print("marche Droite")
+		$AnimatedSprite.play("marche")
+		$AnimatedSprite.flip_h = false
+		velocity.x = SPEED
+
+	if Input.is_action_pressed("ui_left") :
+		print("marche G")
+		$AnimatedSprite.play("marche")
+		$AnimatedSprite.flip_h = true
+		velocity.x = - SPEED
+	else :
+		$AnimatedSprite.play("idle")
+		velocity.x = 0
+
 
 func _physics_process(delta):
 	gravity(delta)
+	walk()
 	jump()
 
 	# var direction =Vector2(0,0)
