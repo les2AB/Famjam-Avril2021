@@ -144,6 +144,7 @@ func _on_Corps_body_shape_entered(_body_id:int, body:Node, _body_shape:int, _are
 
 
 func mourir():
+	$AnimatedSprite.play("meurt")
 	print ("Princesse meurt")
 
 
