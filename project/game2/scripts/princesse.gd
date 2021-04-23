@@ -21,6 +21,7 @@ var points = 0
 var vie = 3
 
 func _ready():
+	points = 0
 	is_ui_key_jump_release= true
 	is_alive = true
 	self.screen_size = get_viewport_rect().size

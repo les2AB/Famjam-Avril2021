@@ -8,4 +8,8 @@ func _ready():
 	$Vies_score.text = "3"
 
 func change_valPoints(pieces):
-	$Piece_score.text = str(pieces)
+	$Points_score.text = "   "
+	$Points_score.update()
+	$Points_score.text = str(pieces)
+	$Points_score.update()
+	
