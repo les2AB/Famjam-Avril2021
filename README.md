@@ -1,6 +1,6 @@
 # Famjam-Avril2021 (n°2 !!)
 
-22 Avril 2021 - Les2AB présente leur nouveau jeu : **Mario Like**
+22 Avril 2021 - Les2AB présente : **Mario Like**
 
 [Jouer maintenant !](https://les2ab.github.io/Famjam-Avril2021)
 
