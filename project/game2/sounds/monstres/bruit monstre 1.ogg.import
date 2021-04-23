@@ -11,5 +11,5 @@ dest_files=[ "res://.import/bruit monstre 1.ogg-280ac385facfb4018958d0c274ba32a2
 
 [params]
 
-loop=true
+loop=false
 loop_offset=0

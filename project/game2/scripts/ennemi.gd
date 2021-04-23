@@ -4,7 +4,7 @@ export (int) var speed : int = 50
 export (int) var gravity = -981
 
 
-
+onready var ennemiAudioControl= get_node("EnnemiAudioControl")
 
 var velocity= Vector2.ZERO
 
@@ -36,6 +36,7 @@ func _process(delta):
 
 func mourir():
 	print ("enemi meurt")
+	ennemiAudioControl.play_scream()
 	$AnimatedSprite.play("meurt")
 
 
