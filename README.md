@@ -3,6 +3,9 @@
 22 Avril 2021 - Les2AB présente : **Mario Like**
 
 [Jouer maintenant !](https://les2ab.github.io/Famjam-Avril2021)
+  
+
+Un coup d'œil sur [nos autres jeux](https://les2ab.github.io/).
 
 
 
@@ -12,7 +15,3 @@
 * Fonts [Joystix monospace](https://www.1001fonts.com/joystix-font.html) de [Typodermic Fonts Inc.](https://typodermicfonts.com/proportional-joystix/)
 
 
-
-## Projet *FamJam*
-
-Un *Famjam*, c'est quoi ? [Plus d'infos ici](https://github.com/Pskalou/famjam1).
