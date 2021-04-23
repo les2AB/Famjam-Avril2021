@@ -3,7 +3,7 @@
 [ext_resource path="res://game2/scenes/musiques.tscn" type="PackedScene" id=1]
 [ext_resource path="res://game2/img/tuiles/tuiles_Plateformes.tres" type="TileSet" id=2]
 [ext_resource path="res://game2/img/tuiles/tuiles_Sol.tres" type="TileSet" id=3]
-[ext_resource path="res://game2/scenes/princesse.tscn" type="PackedScene" id=4]
+[ext_resource path="res://game2/scenes/piece.tscn" type="PackedScene" id=4]
 [ext_resource path="res://game2/scenes/ennemi.tscn" type="PackedScene" id=5]
 
 [node name="Niveau xxx" type="Node2D"]
@@ -45,5 +45,16 @@ position = Vector2( 1785.37, 273.789 )
 
 [node name="Musiques" parent="." instance=ExtResource( 1 )]
 
-[node name="Princesse" parent="." instance=ExtResource( 4 )]
-position = Vector2( 98, 308.794 )
+[node name="Piece" parent="." instance=ExtResource( 4 )]
+position = Vector2( 444.051, 344.826 )
+frame = 0
+
+[node name="Piece2" parent="." instance=ExtResource( 4 )]
+position = Vector2( 311.618, 439.118 )
+
+[node name="Piece3" parent="." instance=ExtResource( 4 )]
+position = Vector2( 596.613, 383.97 )
+
+[node name="Piece4" parent="." instance=ExtResource( 4 )]
+position = Vector2( 435.575, 236.704 )
+frame = 2
