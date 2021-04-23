@@ -120,7 +120,7 @@ script = ExtResource( 3 )
 position = Vector2( 0.10511, 0 )
 frames = SubResource( 18 )
 animation = "marche"
-frame = 5
+frame = 3
 playing = true
 
 [node name="Move_collision" type="CollisionShape2D" parent="."]
