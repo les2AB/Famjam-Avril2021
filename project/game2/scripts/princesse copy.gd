@@ -64,7 +64,6 @@ func walk():
 		velocity.x = SPEED
 
 	
-
 	else :
 		$AnimatedSprite.play("idle")
 		velocity.x = 0
