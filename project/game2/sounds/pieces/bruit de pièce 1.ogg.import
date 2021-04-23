@@ -11,5 +11,5 @@ dest_files=[ "res://.import/bruit de pièce 1.ogg-c615f357b2a2420defc261e5792e3f
 
 [params]
 
-loop=true
+loop=false
 loop_offset=0
