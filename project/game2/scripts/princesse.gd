@@ -91,8 +91,9 @@ func _on_Corps_body_entered(body):
 		return
 
 	print (self.name, " : contact corps avec ", body.name)
-	
 	if 'ennemis' in body.get_groups():
+		print ("Princesse meurt")
+		$AnimatedSprite.play("meurt")
 		mourir()
 
 

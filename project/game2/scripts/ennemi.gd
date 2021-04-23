@@ -38,6 +38,9 @@ func mourir():
 	print ("enemi meurt")
 	ennemiAudioControl.play_scream()
 	$AnimatedSprite.play("meurt")
+	$Move_collision.scale= Vector2(1,0.01)
+	# $Move_collision.set_deferred('disabled', true)
+	$Hit_collision/CollisionCorps.set_deferred('disabled', true)
 
 
 func stop_vertical():
@@ -57,6 +60,13 @@ func _on_AnimatedSprite_animation_finished():
 
 
 func _on_Hit_collision_body_entered(body):
-	if body != self:
+	if body == self:
+		return
+
+	if body.name == 'Princesse':
+		print ("ennemi meurt")
+		mourir()
+
+	else:
 		print (self.name, " Hit_collision par : ", body.name)
-		pass # Replace with function body.
+		

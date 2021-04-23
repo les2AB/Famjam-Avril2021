@@ -374,14 +374,14 @@ animations = [ {
 "speed": 15.0
 } ]
 
-[sub_resource type="RectangleShape2D" id=66]
-extents = Vector2( 2.98756, 1.421 )
-
 [sub_resource type="RectangleShape2D" id=67]
 extents = Vector2( 5.49115, 6.64827 )
 
 [sub_resource type="RectangleShape2D" id=68]
 extents = Vector2( 4.76572, 2.5873 )
+
+[sub_resource type="RectangleShape2D" id=66]
+extents = Vector2( 2.98756, 1.421 )
 
 [node name="Princesse" type="KinematicBody2D"]
 script = ExtResource( 1 )
@@ -441,12 +441,7 @@ offset = Vector2( 2048, 0 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 65 )
 animation = "idle"
-frame = 4
 playing = true
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( -1.67044, 13.5862 )
-shape = SubResource( 66 )
 
 [node name="Corps" type="Area2D" parent="."]
 
@@ -459,5 +454,9 @@ shape = SubResource( 67 )
 [node name="CollisionTete" type="CollisionShape2D" parent="Tete"]
 position = Vector2( -2.19045, -5.40412 )
 shape = SubResource( 68 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( -1.55152, 13.8657 )
+shape = SubResource( 66 )
 [connection signal="body_entered" from="Corps" to="." method="_on_Corps_body_entered"]
 [connection signal="body_entered" from="Tete" to="." method="_on_Tete_body_entered"]
