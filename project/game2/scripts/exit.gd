@@ -6,7 +6,7 @@ func _ready():
 	level = 1
 	pass # Replace with function body.
 
-func _on_Area2D_body_entered(body):
+func _on_Area2D_body_entered(_body):
 	var _ignore= get_tree().change_scene("res://arcade/arcade.tscn")
 
 	### En attendant...

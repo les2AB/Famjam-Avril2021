@@ -12,282 +12,274 @@ script = ExtResource( 1 )
 
 [node name="Niveau Olgaline" parent="." instance=ExtResource( 3 )]
 
+[node name="pieces" type="Node2D" parent="Niveau Olgaline"]
+
+[node name="Piece" parent="Niveau Olgaline/pieces" instance=ExtResource( 5 )]
+position = Vector2( 350.819, 381.463 )
+frame = 6
+
+[node name="Piece2" parent="Niveau Olgaline/pieces" instance=ExtResource( 5 )]
+position = Vector2( 316.293, 380.669 )
+
+[node name="Piece3" parent="Niveau Olgaline/pieces" instance=ExtResource( 5 )]
+position = Vector2( 213.112, 381.066 )
+
+[node name="Piece4" parent="Niveau Olgaline/pieces" instance=ExtResource( 5 )]
+position = Vector2( 249.225, 306.061 )
+
+[node name="Piece5" parent="Niveau Olgaline/pieces" instance=ExtResource( 5 )]
+position = Vector2( 296.847, 302.489 )
+
+[node name="Piece6" parent="Niveau Olgaline/pieces" instance=ExtResource( 5 )]
+position = Vector2( 437.729, 317.173 )
+
+[node name="Piece7" parent="Niveau Olgaline/pieces" instance=ExtResource( 5 )]
+position = Vector2( 497.654, 352.889 )
+
+[node name="Piece8" parent="Niveau Olgaline/pieces" instance=ExtResource( 5 )]
+position = Vector2( 44.4506, 268.757 )
+
+[node name="Piece9" parent="Niveau Olgaline/pieces" instance=ExtResource( 5 )]
+position = Vector2( 188.507, 260.82 )
+frame = 6
+
+[node name="Piece10" parent="Niveau Olgaline/pieces" instance=ExtResource( 5 )]
+position = Vector2( 206.365, 162.401 )
+frame = 6
+
+[node name="Piece11" parent="Niveau Olgaline/pieces" instance=ExtResource( 5 )]
+position = Vector2( 253.591, 161.608 )
+frame = 6
+
+[node name="Piece12" parent="Niveau Olgaline/pieces" instance=ExtResource( 5 )]
+position = Vector2( 442.888, 166.37 )
+frame = 6
+
+[node name="Piece13" parent="Niveau Olgaline/pieces" instance=ExtResource( 5 )]
+position = Vector2( 603.613, 339.793 )
+frame = 5
+
+[node name="Piece14" parent="Niveau Olgaline/pieces" instance=ExtResource( 5 )]
+position = Vector2( 618.296, 360.826 )
+frame = 5
+
+[node name="Piece15" parent="Niveau Olgaline/pieces" instance=ExtResource( 5 )]
+position = Vector2( 585.357, 327.094 )
+frame = 5
+
+[node name="Piece16" parent="Niveau Olgaline/pieces" instance=ExtResource( 5 )]
+position = Vector2( 679.014, 266.773 )
+frame = 4
+
+[node name="Piece17" parent="Niveau Olgaline/pieces" instance=ExtResource( 5 )]
+position = Vector2( 734.573, 385.034 )
+frame = 4
+
+[node name="Piece18" parent="Niveau Olgaline/pieces" instance=ExtResource( 5 )]
+position = Vector2( 757.987, 384.241 )
+frame = 4
+
+[node name="Piece19" parent="Niveau Olgaline/pieces" instance=ExtResource( 5 )]
+position = Vector2( 783.386, 383.05 )
+frame = 3
+
+[node name="Piece20" parent="Niveau Olgaline/pieces" instance=ExtResource( 5 )]
+position = Vector2( 812.753, 383.447 )
+frame = 3
+
+[node name="Piece21" parent="Niveau Olgaline/pieces" instance=ExtResource( 5 )]
+position = Vector2( 836.564, 355.667 )
+frame = 3
+
+[node name="Piece22" parent="Niveau Olgaline/pieces" instance=ExtResource( 5 )]
+position = Vector2( 698.46, 305.664 )
+frame = 0
+
+[node name="Piece23" parent="Niveau Olgaline/pieces" instance=ExtResource( 5 )]
+position = Vector2( 800.053, 481.072 )
+frame = 1
+
+[node name="Piece24" parent="Niveau Olgaline/pieces" instance=ExtResource( 5 )]
+position = Vector2( 856.406, 484.644 )
+frame = 1
+
+[node name="Piece25" parent="Niveau Olgaline/pieces" instance=ExtResource( 5 )]
+position = Vector2( 740.526, 482.659 )
+frame = 0
+
+[node name="Piece26" parent="Niveau Olgaline/pieces" instance=ExtResource( 5 )]
+position = Vector2( 659.568, 483.453 )
+frame = 6
+
+[node name="Piece27" parent="Niveau Olgaline/pieces" instance=ExtResource( 5 )]
+position = Vector2( 582.183, 485.437 )
+frame = 6
+
+[node name="Piece28" parent="Niveau Olgaline/pieces" instance=ExtResource( 5 )]
+position = Vector2( 530.989, 483.056 )
+frame = 6
+
+[node name="Piece29" parent="Niveau Olgaline/pieces" instance=ExtResource( 5 )]
+position = Vector2( 442.888, 483.85 )
+
+[node name="Piece30" parent="Niveau Olgaline/pieces" instance=ExtResource( 5 )]
+position = Vector2( 109.137, 434.244 )
+
+[node name="Piece31" parent="Niveau Olgaline/pieces" instance=ExtResource( 5 )]
+position = Vector2( 186.523, 450.911 )
+frame = 6
+
+[node name="Piece32" parent="Niveau Olgaline/pieces" instance=ExtResource( 5 )]
+position = Vector2( 263.909, 466.389 )
+frame = 6
+
+[node name="Piece33" parent="Niveau Olgaline/pieces" instance=ExtResource( 5 )]
+position = Vector2( 263.909, 449.324 )
+frame = 6
+
+[node name="Piece34" parent="Niveau Olgaline/pieces" instance=ExtResource( 5 )]
+position = Vector2( 263.909, 432.656 )
+frame = 6
+
+[node name="Piece35" parent="Niveau Olgaline/pieces" instance=ExtResource( 5 )]
+position = Vector2( 342.485, 483.056 )
+frame = 5
+
+[node name="Piece36" parent="Niveau Olgaline/pieces" instance=ExtResource( 5 )]
+position = Vector2( 309.546, 436.625 )
+frame = 5
+
+[node name="Piece37" parent="Niveau Olgaline/pieces" instance=ExtResource( 5 )]
+position = Vector2( 221.049, 428.688 )
+frame = 4
+
+[node name="Piece38" parent="Niveau Olgaline/pieces" instance=ExtResource( 5 )]
+position = Vector2( 144.457, 421.941 )
+frame = 4
+
+[node name="Piece39" parent="Niveau Olgaline/pieces" instance=ExtResource( 5 )]
+position = Vector2( -36.507, 286.219 )
+frame = 3
+
+[node name="Piece40" parent="Niveau Olgaline/pieces" instance=ExtResource( 5 )]
+position = Vector2( 61.515, 249.708 )
+frame = 3
+
+[node name="Piece41" parent="Niveau Olgaline/pieces" instance=ExtResource( 5 )]
+position = Vector2( -136.91, 81.8407 )
+frame = 0
+
+[node name="Piece42" parent="Niveau Olgaline/pieces" instance=ExtResource( 5 )]
+position = Vector2( -54.7621, 18.3447 )
+frame = 0
+
+[node name="Piece43" parent="Niveau Olgaline/pieces" instance=ExtResource( 5 )]
+position = Vector2( -31.7448, -4.67262 )
+frame = 1
+
+[node name="Piece44" parent="Niveau Olgaline/pieces" instance=ExtResource( 5 )]
+position = Vector2( -15.0771, -24.1183 )
+frame = 0
+
+[node name="Piece45" parent="Niveau Olgaline/pieces" instance=ExtResource( 5 )]
+position = Vector2( -76.9858, -3.87893 )
+frame = 0
+
+[node name="Piece46" parent="Niveau Olgaline/pieces" instance=ExtResource( 5 )]
+position = Vector2( -93.6535, -32.4521 )
+frame = 0
+
+[node name="Piece47" parent="Niveau Olgaline/pieces" instance=ExtResource( 5 )]
+position = Vector2( -77.7795, -54.6758 )
+frame = 6
+
+[node name="Piece48" parent="Niveau Olgaline/pieces" instance=ExtResource( 5 )]
+position = Vector2( -51.5873, -41.9766 )
+frame = 6
+
+[node name="Piece49" parent="Niveau Olgaline/pieces" instance=ExtResource( 5 )]
+position = Vector2( -30.5543, -57.4537 )
+
+[node name="Piece50" parent="Niveau Olgaline/pieces" instance=ExtResource( 5 )]
+position = Vector2( -9.91808, -47.1356 )
+
+[node name="Piece51" parent="Niveau Olgaline/pieces" instance=ExtResource( 5 )]
+position = Vector2( 106.756, 19.9321 )
+
+[node name="Piece52" parent="Niveau Olgaline/pieces" instance=ExtResource( 5 )]
+position = Vector2( 105.962, 0.0895691 )
+
+[node name="Piece53" parent="Niveau Olgaline/pieces" instance=ExtResource( 5 )]
+position = Vector2( 105.565, -22.134 )
+
+[node name="Piece54" parent="Niveau Olgaline/pieces" instance=ExtResource( 5 )]
+position = Vector2( 105.169, -43.564 )
+frame = 6
+
+[node name="Piece55" parent="Niveau Olgaline/pieces" instance=ExtResource( 5 )]
+position = Vector2( 232.954, 147.321 )
+frame = 6
+
+[node name="Piece56" parent="Niveau Olgaline/pieces" instance=ExtResource( 5 )]
+position = Vector2( 254.781, 138.987 )
+frame = 5
+
+[node name="Piece57" parent="Niveau Olgaline/pieces" instance=ExtResource( 5 )]
+position = Vector2( 210.731, 131.447 )
+frame = 5
+
+[node name="Piece58" parent="Niveau Olgaline/pieces" instance=ExtResource( 5 )]
+position = Vector2( 234.145, 112.398 )
+frame = 5
+
+[node name="Piece59" parent="Niveau Olgaline/pieces" instance=ExtResource( 5 )]
+position = Vector2( 253.987, 94.9368 )
+frame = 5
+
+[node name="Piece60" parent="Niveau Olgaline/pieces" instance=ExtResource( 5 )]
+position = Vector2( 215.493, 90.5714 )
+frame = 5
+
+[node name="Piece61" parent="Niveau Olgaline/pieces" instance=ExtResource( 5 )]
+position = Vector2( 235.732, 69.1415 )
+frame = 4
+
+[node name="Piece62" parent="Niveau Olgaline/pieces" instance=ExtResource( 5 )]
+position = Vector2( 231.764, 46.1242 )
+frame = 4
+
+[node name="Piece63" parent="Niveau Olgaline/pieces" instance=ExtResource( 5 )]
+position = Vector2( 214.699, 24.6943 )
+frame = 4
+
+[node name="Piece64" parent="Niveau Olgaline/pieces" instance=ExtResource( 5 )]
+position = Vector2( 232.954, 6.04233 )
+frame = 3
+
+[node name="ennemis" type="Node2D" parent="Niveau Olgaline"]
+
+[node name="Ennemi" parent="Niveau Olgaline/ennemis" instance=ExtResource( 6 )]
+position = Vector2( 366.252, 375.755 )
+
+[node name="Ennemi2" parent="Niveau Olgaline/ennemis" instance=ExtResource( 6 )]
+position = Vector2( 410.338, 266.151 )
+
+[node name="Ennemi3" parent="Niveau Olgaline/ennemis" instance=ExtResource( 6 )]
+position = Vector2( -220.042, 60.0856 )
+
+[node name="Ennemi4" parent="Niveau Olgaline/ennemis" instance=ExtResource( 6 )]
+position = Vector2( -118.704, 177.124 )
+
+[node name="Ennemi5" parent="Niveau Olgaline/ennemis" instance=ExtResource( 6 )]
+position = Vector2( 642.361, 316.476 )
+
+[node name="Ennemi6" parent="Niveau Olgaline/ennemis" instance=ExtResource( 6 )]
+position = Vector2( 734.534, 295.816 )
+
+[node name="Ennemi7" parent="Niveau Olgaline/ennemis" instance=ExtResource( 6 )]
+position = Vector2( 522.641, 257.675 )
+
 [node name="Princesse" parent="." instance=ExtResource( 2 )]
 position = Vector2( 270.927, 372.367 )
 
 [node name="CanvasLayer" parent="." instance=ExtResource( 4 )]
-
-[node name="ennemis" type="Node2D" parent="."]
-
-[node name="Ennemi" parent="ennemis" instance=ExtResource( 6 )]
-position = Vector2( 366.252, 375.755 )
-
-[node name="Ennemi2" parent="ennemis" instance=ExtResource( 6 )]
-position = Vector2( 410.338, 266.151 )
-
-[node name="Ennemi3" parent="ennemis" instance=ExtResource( 6 )]
-position = Vector2( -220.042, 60.0856 )
-
-[node name="Ennemi4" parent="ennemis" instance=ExtResource( 6 )]
-position = Vector2( -118.704, 177.124 )
-
-[node name="Ennemi5" parent="ennemis" instance=ExtResource( 6 )]
-position = Vector2( 642.361, 316.476 )
-
-[node name="Ennemi6" parent="ennemis" instance=ExtResource( 6 )]
-position = Vector2( 734.534, 295.816 )
-
-[node name="Ennemi7" parent="ennemis" instance=ExtResource( 6 )]
-position = Vector2( 522.641, 257.675 )
-
-[node name="pieces" type="Node2D" parent="."]
-
-[node name="Piece" parent="pieces" instance=ExtResource( 5 )]
-position = Vector2( 350.819, 381.463 )
-
-[node name="Piece2" parent="pieces" instance=ExtResource( 5 )]
-position = Vector2( 316.293, 380.669 )
-frame = 8
-
-[node name="Piece3" parent="pieces" instance=ExtResource( 5 )]
-position = Vector2( 213.112, 381.066 )
-frame = 8
-
-[node name="Piece4" parent="pieces" instance=ExtResource( 5 )]
-position = Vector2( 249.225, 306.061 )
-frame = 8
-
-[node name="Piece5" parent="pieces" instance=ExtResource( 5 )]
-position = Vector2( 296.847, 302.489 )
-frame = 8
-
-[node name="Piece6" parent="pieces" instance=ExtResource( 5 )]
-position = Vector2( 437.729, 317.173 )
-frame = 8
-
-[node name="Piece7" parent="pieces" instance=ExtResource( 5 )]
-position = Vector2( 497.654, 352.889 )
-frame = 8
-
-[node name="Piece8" parent="pieces" instance=ExtResource( 5 )]
-position = Vector2( 44.4506, 268.757 )
-frame = 8
-
-[node name="Piece9" parent="pieces" instance=ExtResource( 5 )]
-position = Vector2( 188.507, 260.82 )
-frame = 7
-
-[node name="Piece10" parent="pieces" instance=ExtResource( 5 )]
-position = Vector2( 206.365, 162.401 )
-frame = 7
-
-[node name="Piece11" parent="pieces" instance=ExtResource( 5 )]
-position = Vector2( 253.591, 161.608 )
-frame = 7
-
-[node name="Piece12" parent="pieces" instance=ExtResource( 5 )]
-position = Vector2( 442.888, 166.37 )
-frame = 7
-
-[node name="Piece13" parent="pieces" instance=ExtResource( 5 )]
-position = Vector2( 603.613, 339.793 )
-frame = 6
-
-[node name="Piece14" parent="pieces" instance=ExtResource( 5 )]
-position = Vector2( 618.296, 360.826 )
-frame = 6
-
-[node name="Piece15" parent="pieces" instance=ExtResource( 5 )]
-position = Vector2( 585.357, 327.094 )
-frame = 6
-
-[node name="Piece16" parent="pieces" instance=ExtResource( 5 )]
-position = Vector2( 679.014, 266.773 )
-frame = 5
-
-[node name="Piece17" parent="pieces" instance=ExtResource( 5 )]
-position = Vector2( 734.573, 385.034 )
-frame = 5
-
-[node name="Piece18" parent="pieces" instance=ExtResource( 5 )]
-position = Vector2( 757.987, 384.241 )
-frame = 5
-
-[node name="Piece19" parent="pieces" instance=ExtResource( 5 )]
-position = Vector2( 783.386, 383.05 )
-frame = 4
-
-[node name="Piece20" parent="pieces" instance=ExtResource( 5 )]
-position = Vector2( 812.753, 383.447 )
-frame = 4
-
-[node name="Piece21" parent="pieces" instance=ExtResource( 5 )]
-position = Vector2( 836.564, 355.667 )
-frame = 4
-
-[node name="Piece22" parent="pieces" instance=ExtResource( 5 )]
-position = Vector2( 698.46, 305.664 )
-frame = 1
-
-[node name="Piece23" parent="pieces" instance=ExtResource( 5 )]
-position = Vector2( 800.053, 481.072 )
-frame = 2
-
-[node name="Piece24" parent="pieces" instance=ExtResource( 5 )]
-position = Vector2( 856.406, 484.644 )
-frame = 2
-
-[node name="Piece25" parent="pieces" instance=ExtResource( 5 )]
-position = Vector2( 740.526, 482.659 )
-frame = 1
-
-[node name="Piece26" parent="pieces" instance=ExtResource( 5 )]
-position = Vector2( 659.568, 483.453 )
-
-[node name="Piece27" parent="pieces" instance=ExtResource( 5 )]
-position = Vector2( 582.183, 485.437 )
-
-[node name="Piece28" parent="pieces" instance=ExtResource( 5 )]
-position = Vector2( 530.989, 483.056 )
-
-[node name="Piece29" parent="pieces" instance=ExtResource( 5 )]
-position = Vector2( 442.888, 483.85 )
-frame = 8
-
-[node name="Piece30" parent="pieces" instance=ExtResource( 5 )]
-position = Vector2( 109.137, 434.244 )
-frame = 8
-
-[node name="Piece31" parent="pieces" instance=ExtResource( 5 )]
-position = Vector2( 186.523, 450.911 )
-frame = 7
-
-[node name="Piece32" parent="pieces" instance=ExtResource( 5 )]
-position = Vector2( 263.909, 466.389 )
-frame = 7
-
-[node name="Piece33" parent="pieces" instance=ExtResource( 5 )]
-position = Vector2( 263.909, 449.324 )
-frame = 7
-
-[node name="Piece34" parent="pieces" instance=ExtResource( 5 )]
-position = Vector2( 263.909, 432.656 )
-frame = 7
-
-[node name="Piece35" parent="pieces" instance=ExtResource( 5 )]
-position = Vector2( 342.485, 483.056 )
-frame = 6
-
-[node name="Piece36" parent="pieces" instance=ExtResource( 5 )]
-position = Vector2( 309.546, 436.625 )
-frame = 6
-
-[node name="Piece37" parent="pieces" instance=ExtResource( 5 )]
-position = Vector2( 221.049, 428.688 )
-frame = 5
-
-[node name="Piece38" parent="pieces" instance=ExtResource( 5 )]
-position = Vector2( 144.457, 421.941 )
-frame = 5
-
-[node name="Piece39" parent="pieces" instance=ExtResource( 5 )]
-position = Vector2( -36.507, 286.219 )
-frame = 4
-
-[node name="Piece40" parent="pieces" instance=ExtResource( 5 )]
-position = Vector2( 61.515, 249.708 )
-frame = 4
-
-[node name="Piece41" parent="pieces" instance=ExtResource( 5 )]
-position = Vector2( -136.91, 81.8407 )
-frame = 1
-
-[node name="Piece42" parent="pieces" instance=ExtResource( 5 )]
-position = Vector2( -54.7621, 18.3447 )
-frame = 1
-
-[node name="Piece43" parent="pieces" instance=ExtResource( 5 )]
-position = Vector2( -31.7448, -4.67262 )
-frame = 2
-
-[node name="Piece44" parent="pieces" instance=ExtResource( 5 )]
-position = Vector2( -15.0771, -24.1183 )
-frame = 1
-
-[node name="Piece45" parent="pieces" instance=ExtResource( 5 )]
-position = Vector2( -76.9858, -3.87893 )
-frame = 1
-
-[node name="Piece46" parent="pieces" instance=ExtResource( 5 )]
-position = Vector2( -93.6535, -32.4521 )
-frame = 1
-
-[node name="Piece47" parent="pieces" instance=ExtResource( 5 )]
-position = Vector2( -77.7795, -54.6758 )
-
-[node name="Piece48" parent="pieces" instance=ExtResource( 5 )]
-position = Vector2( -51.5873, -41.9766 )
-
-[node name="Piece49" parent="pieces" instance=ExtResource( 5 )]
-position = Vector2( -30.5543, -57.4537 )
-frame = 8
-
-[node name="Piece50" parent="pieces" instance=ExtResource( 5 )]
-position = Vector2( -9.91808, -47.1356 )
-frame = 8
-
-[node name="Piece51" parent="pieces" instance=ExtResource( 5 )]
-position = Vector2( 106.756, 19.9321 )
-frame = 8
-
-[node name="Piece52" parent="pieces" instance=ExtResource( 5 )]
-position = Vector2( 105.962, 0.0895691 )
-frame = 8
-
-[node name="Piece53" parent="pieces" instance=ExtResource( 5 )]
-position = Vector2( 105.565, -22.134 )
-frame = 8
-
-[node name="Piece54" parent="pieces" instance=ExtResource( 5 )]
-position = Vector2( 105.169, -43.564 )
-frame = 7
-
-[node name="Piece55" parent="pieces" instance=ExtResource( 5 )]
-position = Vector2( 232.954, 147.321 )
-frame = 7
-
-[node name="Piece56" parent="pieces" instance=ExtResource( 5 )]
-position = Vector2( 254.781, 138.987 )
-frame = 6
-
-[node name="Piece57" parent="pieces" instance=ExtResource( 5 )]
-position = Vector2( 210.731, 131.447 )
-frame = 6
-
-[node name="Piece58" parent="pieces" instance=ExtResource( 5 )]
-position = Vector2( 234.145, 112.398 )
-frame = 6
-
-[node name="Piece59" parent="pieces" instance=ExtResource( 5 )]
-position = Vector2( 253.987, 94.9368 )
-frame = 6
-
-[node name="Piece60" parent="pieces" instance=ExtResource( 5 )]
-position = Vector2( 215.493, 90.5714 )
-frame = 6
-
-[node name="Piece61" parent="pieces" instance=ExtResource( 5 )]
-position = Vector2( 235.732, 69.1415 )
-frame = 5
-
-[node name="Piece62" parent="pieces" instance=ExtResource( 5 )]
-position = Vector2( 231.764, 46.1242 )
-frame = 5
-
-[node name="Piece63" parent="pieces" instance=ExtResource( 5 )]
-position = Vector2( 214.699, 24.6943 )
-frame = 5
-
-[node name="Piece64" parent="pieces" instance=ExtResource( 5 )]
-position = Vector2( 232.954, 6.04233 )
-frame = 4
