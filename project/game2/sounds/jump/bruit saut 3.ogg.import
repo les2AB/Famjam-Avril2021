@@ -11,5 +11,5 @@ dest_files=[ "res://.import/bruit saut 3.ogg-d569fc3e1a4ed040d335ad56a2cdc1b3.og
 
 [params]
 
-loop=true
+loop=false
 loop_offset=0

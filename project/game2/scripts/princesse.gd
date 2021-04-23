@@ -1,5 +1,10 @@
 extends KinematicBody2D
 
+
+# controleur de sons de la princesse
+onready var audio_control= get_node("Princesse_Audio")
+
+
 export (int) var speed : int = 150
 export (int) var jump_force = -300
 
@@ -33,7 +38,7 @@ func gravity(delta):
 
 func jump():
 	if is_ui_key_jump_release and is_on_floor() and (Input.is_action_pressed("ui_up") or Input.is_action_pressed("ui_accept")):
-
+		audio_control.play_jump()
 		is_ui_key_jump_release= false
 		velocity.y = jump_force
 		
