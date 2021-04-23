@@ -12,7 +12,6 @@ const GRAVITY = 980
 var is_alive
 var is_ui_key_jump_release
 func _ready():
-	# changement mineur...
 	is_ui_key_jump_release= true
 	is_alive = true
 	self.screen_size = get_viewport_rect().size
