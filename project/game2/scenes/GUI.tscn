@@ -11,25 +11,14 @@ use_mipmaps = true
 use_filter = true
 font_data = ExtResource( 4 )
 
-[sub_resource type="DynamicFont" id=1]
+[sub_resource type="DynamicFont" id=3]
 size = 25
 use_mipmaps = true
 use_filter = true
 font_data = ExtResource( 4 )
 
-[node name="CanvasLayer" type="CanvasLayer"]
+[node name="GUI" type="CanvasLayer"]
 script = ExtResource( 3 )
-
-[node name="Vies_score" type="Label" parent="."]
-margin_left = 47.1784
-margin_top = 30.8162
-margin_right = 63.1784
-margin_bottom = 62.8162
-custom_fonts/font = SubResource( 2 )
-text = "3"
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="Points_icone" type="TextureRect" parent="."]
 margin_left = 5.70811
@@ -48,19 +37,29 @@ margin_left = 43.1784
 margin_top = 3.35677
 margin_right = 81.1784
 margin_bottom = 35.3568
-custom_fonts/font = SubResource( 1 )
-text = "10"
+custom_fonts/font = SubResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Vies_score2" type="TextureRect" parent="."]
+[node name="Vies_icone" type="TextureRect" parent="."]
 margin_left = 6.52431
 margin_top = 34.8757
 margin_right = 34.5243
 margin_bottom = 62.8757
 texture = ExtResource( 2 )
 expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Vies_score" type="Label" parent="."]
+margin_left = 47.1784
+margin_top = 30.8162
+margin_right = 63.1784
+margin_bottom = 62.8162
+custom_fonts/font = SubResource( 3 )
+text = "3"
 __meta__ = {
 "_edit_use_anchors_": false
 }
