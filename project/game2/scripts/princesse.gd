@@ -1,8 +1,10 @@
 extends KinematicBody2D
 
-export (int) var speed : int = 200
+export (int) var speed : int = 150
 export (int) var jump_force = -300
 
+# score
+var points
 
 var screen_size : Vector2
  
@@ -11,7 +13,11 @@ const GRAVITY = 980
 	
 var is_alive
 var is_ui_key_jump_release
+
+
+
 func _ready():
+	points = 0
 	is_ui_key_jump_release= true
 	is_alive = true
 	self.screen_size = get_viewport_rect().size
