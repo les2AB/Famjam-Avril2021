@@ -11,7 +11,7 @@ script = ExtResource( 1 )
 [node name="Niveau Bruno" parent="." instance=ExtResource( 3 )]
 
 [node name="Princesse" parent="." instance=ExtResource( 2 )]
-position = Vector2( -29.5623, 390.876 )
+position = Vector2( -29.5623, 389.378 )
 speed = 100
 
 [node name="CanvasLayer" parent="." instance=ExtResource( 4 )]
