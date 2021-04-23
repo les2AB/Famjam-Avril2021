@@ -39,6 +39,8 @@ func jump():
 		$AnimatedSprite.play("jump")
 
 func _physics_process(delta):
+	gravity(delta)
+	jump()
 
 	# var direction =Vector2(0,0)
 	# if Input.is_action_pressed("ui_right") :
@@ -111,7 +113,7 @@ func mourir():
 	print ("Princesse meurt")
 
 
-func _on_Pieds_body_entered(body:Node):
-	if body != self:
-		state = IDLE
-		print("atterrissage")
+# func _on_Pieds_body_entered(body:Node):
+# 	if body != self:
+# 		state = IDLE
+# 		print("atterrissage")
