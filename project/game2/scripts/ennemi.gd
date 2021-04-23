@@ -38,7 +38,9 @@ func mourir():
 	print ("enemi meurt")
 	ennemiAudioControl.play_scream()
 	$AnimatedSprite.play("meurt")
-	$Move_collision.scale= Vector2(1,0.01)
+	# $Move_collision.set_deferred('disabled', true)
+	$Move_collision.shape.extents= Vector2(0.1,0.001)
+	$Move_collision.position += Vector2(0,9)
 	# $Move_collision.set_deferred('disabled', true)
 	$Hit_collision/CollisionCorps.set_deferred('disabled', true)
 
