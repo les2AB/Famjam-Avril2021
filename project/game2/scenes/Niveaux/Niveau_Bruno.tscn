@@ -46,4 +46,5 @@ position = Vector2( 1785.37, 273.789 )
 [node name="Musiques" parent="." instance=ExtResource( 1 )]
 
 [node name="Princesse" parent="." instance=ExtResource( 4 )]
+visible = false
 position = Vector2( 98, 308.794 )
