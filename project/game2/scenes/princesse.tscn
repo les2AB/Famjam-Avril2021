@@ -345,7 +345,7 @@ animations = [ {
 "speed": 10.0
 }, {
 "frames": [ SubResource( 9 ), SubResource( 10 ), SubResource( 11 ), SubResource( 12 ), SubResource( 13 ), SubResource( 14 ), SubResource( 15 ), SubResource( 16 ), SubResource( 17 ), SubResource( 18 ), SubResource( 19 ), SubResource( 20 ) ],
-"loop": true,
+"loop": false,
 "name": "attaque",
 "speed": 15.0
 }, {
@@ -442,7 +442,7 @@ offset = Vector2( 2048, 0 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 65 )
 animation = "idle"
-frame = 7
+frame = 3
 playing = true
 
 [node name="Corps" type="Area2D" parent="."]
