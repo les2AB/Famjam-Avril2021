@@ -364,7 +364,7 @@ animations = [ {
 "name": "attente",
 "speed": 5.0
 }, {
-"frames": [ SubResource( 52 ), SubResource( 53 ), SubResource( 54 ), SubResource( 55 ), SubResource( 56 ), SubResource( 57 ), SubResource( 58 ), SubResource( 59 ), SubResource( 60 ), SubResource( 61 ), SubResource( 62 ), SubResource( 63 ), SubResource( 64 ), SubResource( 64 ), SubResource( 64 ), SubResource( 64 ), SubResource( 64 ), SubResource( 64 ), SubResource( 64 ), SubResource( 64 ), SubResource( 64 ) ],
+"frames": [ SubResource( 52 ), SubResource( 53 ), SubResource( 54 ), SubResource( 55 ), SubResource( 56 ), SubResource( 57 ), SubResource( 58 ), SubResource( 59 ), SubResource( 60 ), SubResource( 61 ), SubResource( 62 ), SubResource( 63 ), SubResource( 64 ), SubResource( 64 ), SubResource( 64 ), SubResource( 64 ), SubResource( 64 ), SubResource( 64 ), SubResource( 64 ), SubResource( 64 ), SubResource( 64 ), SubResource( 64 ), SubResource( 64 ), SubResource( 64 ), SubResource( 64 ), SubResource( 64 ), SubResource( 64 ), SubResource( 64 ), SubResource( 64 ) ],
 "loop": false,
 "name": "meurt",
 "speed": 15.0
@@ -442,7 +442,7 @@ offset = Vector2( 2048, 0 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 65 )
 animation = "idle"
-frame = 7
+frame = 1
 playing = true
 
 [node name="Corps" type="Area2D" parent="."]
