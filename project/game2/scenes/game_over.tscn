@@ -1,7 +1,9 @@
 [gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://game2/img/screens/game_over.png" type="Texture" id=1]
-[ext_resource path="res://game2/scenes/game_over.gd" type="Script" id=2]
+[ext_resource path="res://game2/scripts/Game_over.gd" type="Script" id=2]
+
+
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource( 2 )

@@ -5,7 +5,7 @@ const LOADER_1 = preload("res://loader1/loader_1.tscn")
 const LOADERS  = [LOADER_1]
 
 const GAME_1 = preload("res://game1/game_1.tscn")
-const GAME_2 = preload("res://game2/accueil.tscn")
+const GAME_2 = preload("res://game2/Accueil.tscn")
 const GAMES  = [GAME_1, GAME_2]
 
 var arcade = preload("res://arcade/arcade.tscn")
