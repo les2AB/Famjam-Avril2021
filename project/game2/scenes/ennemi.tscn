@@ -108,34 +108,15 @@ animations = [ {
 } ]
 
 [sub_resource type="RectangleShape2D" id=19]
-extents = Vector2( 12.9189, 9.88362 )
+extents = Vector2( 14.0751, 9.88362 )
 
 [sub_resource type="RectangleShape2D" id=20]
-extents = Vector2( 10.7735, 7.34657 )
+extents = Vector2( 12.0349, 7.34657 )
 
 [node name="Ennemi" type="KinematicBody2D"]
 script = ExtResource( 3 )
 
-[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
-position = Vector2( 0.10511, 0 )
-frames = SubResource( 18 )
-animation = "marche"
-frame = 8
-playing = true
-
-[node name="Move_collision" type="CollisionShape2D" parent="."]
-position = Vector2( -1.63326, 3.36625 )
-shape = SubResource( 19 )
-
-[node name="Hit_collision" type="Area2D" parent="."]
-
-[node name="CollisionCorps" type="CollisionShape2D" parent="Hit_collision"]
-position = Vector2( -2.74636, -0.642419 )
-shape = SubResource( 20 )
-
 [node name="EnnemiAudioControl" type="Control" parent="."]
-margin_right = 40.0
-margin_bottom = 40.0
 script = ExtResource( 5 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -157,6 +138,23 @@ attenuation = 0.68302
 [node name="scream4" type="AudioStreamPlayer2D" parent="EnnemiAudioControl"]
 stream = ExtResource( 7 )
 volume_db = -10.0
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( 0.10511, 0 )
+frames = SubResource( 18 )
+animation = "marche"
+frame = 9
+playing = true
+
+[node name="Move_collision" type="CollisionShape2D" parent="."]
+position = Vector2( -0.477027, 3.36625 )
+shape = SubResource( 19 )
+
+[node name="Hit_collision" type="Area2D" parent="."]
+
+[node name="CollisionCorps" type="CollisionShape2D" parent="Hit_collision"]
+position = Vector2( -1.80035, -0.432195 )
+shape = SubResource( 20 )
 [connection signal="input_event" from="." to="." method="_on_Enemi_input_event"]
 [connection signal="animation_finished" from="AnimatedSprite" to="." method="_on_AnimatedSprite_animation_finished"]
 [connection signal="body_entered" from="Hit_collision" to="." method="_on_Hit_collision_body_entered"]

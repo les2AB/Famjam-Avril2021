@@ -35,6 +35,7 @@ func _process(delta):
 
 
 func mourir():
+	velocity.x= 0
 	print ("enemi meurt")
 	ennemiAudioControl.play_scream()
 	$AnimatedSprite.play("meurt")

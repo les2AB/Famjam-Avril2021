@@ -10,7 +10,6 @@ export (int) var gravity_down= 1300
 export (int) var max_y= -300
 var bonus_y=0
 const GRAVITY = 980
-var direction
 #####
 
 
@@ -46,20 +45,20 @@ func get_control_direction():
 	* y =  1 : saute
 	
 	"""
-	var direction:Vector2= Vector2.ZERO
+	var dir:Vector2= Vector2.ZERO
 	if Input.is_action_pressed("ui_right"):
-		direction.x= 1
+		dir.x= 1
 	if Input.is_action_pressed("ui_left"):
-		direction.x= -1
-	return direction
+		dir.x= -1
+	return dir
 
 
 var velocity= Vector2()
 
-func set_velocity_x(direction):
+func set_velocity_x(dir):
 	# gestion des vitesses horizontale
 	# modification de la vitesse horizontale
-	velocity.x  = direction.x * speed
+	velocity.x  = dir.x * speed
 
 
 func set_velocity_y(delta):
@@ -98,14 +97,14 @@ func get_control_jump():
 		cut_jumping()
 
 
-func play_animation(direction):
-	if direction.x == 1:
+func play_animation(dir):
+	if dir.x == 1:
 		$AnimatedSprite.play("marche")
 		$AnimatedSprite.flip_h = false
-	elif direction.x == -1:
+	elif dir.x == -1:
 		$AnimatedSprite.play("marche")
 		$AnimatedSprite.flip_h = true
-	elif direction.x == 0:
+	elif dir.x == 0:
 		$AnimatedSprite.play("idle")
 	if velocity.y <0:
 		$AnimatedSprite.play("saute")
