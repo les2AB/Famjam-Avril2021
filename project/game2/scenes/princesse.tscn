@@ -379,10 +379,10 @@ animations = [ {
 extents = Vector2( 5.98888, 6.64827 )
 
 [sub_resource type="RectangleShape2D" id=67]
-extents = Vector2( 5.52684, 2.5873 )
+extents = Vector2( 2.47948, 5.84256 )
 
 [sub_resource type="RectangleShape2D" id=68]
-extents = Vector2( 4.81359, 13.5919 )
+extents = Vector2( 2.73247, 13.4432 )
 
 [node name="Princesse" type="KinematicBody2D"]
 script = ExtResource( 1 )
@@ -414,6 +414,8 @@ stream = ExtResource( 12 )
 [node name="Camera2D" type="Camera2D" parent="."]
 current = true
 zoom = Vector2( 0.3, 0.3 )
+drag_margin_h_enabled = true
+drag_margin_v_enabled = true
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="Camera2D"]
 scroll_base_offset = Vector2( 0, 200 )
@@ -442,7 +444,7 @@ offset = Vector2( 2048, 0 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 65 )
 animation = "idle"
-frame = 2
+frame = 3
 playing = true
 
 [node name="Corps" type="Area2D" parent="."]
@@ -454,13 +456,13 @@ shape = SubResource( 66 )
 [node name="Tete" type="Area2D" parent="."]
 
 [node name="CollisionTete" type="CollisionShape2D" parent="Tete"]
-position = Vector2( -2.3391, -10.3839 )
+position = Vector2( -3.00804, -10.0866 )
 shape = SubResource( 67 )
 
 [node name="GUI" parent="." instance=ExtResource( 16 )]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( -2.07181, 1.23033 )
+position = Vector2( -2.59209, 1.156 )
 shape = SubResource( 68 )
 [connection signal="body_entered" from="Corps" to="." method="_on_Corps_body_entered"]
 [connection signal="body_entered" from="Tete" to="." method="_on_Tete_body_entered"]
