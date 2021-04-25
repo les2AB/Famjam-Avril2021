@@ -28,8 +28,8 @@ const FLOOR_NORMAL = Vector2(0,-1)
 var is_alive= true
 # var is_ui_key_jump_release
 
-var points = 0
-var vie = 3
+#var points = 0
+#var vie = 3
 
 
 func _ready():
