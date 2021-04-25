@@ -6,7 +6,7 @@
 [ext_resource path="res://game2/scenes/piece.tscn" type="PackedScene" id=4]
 [ext_resource path="res://game2/scenes/ennemi.tscn" type="PackedScene" id=5]
 [ext_resource path="res://game2/scenes/exit_bis.tscn" type="PackedScene" id=6]
-[ext_resource path="res://game2/scenes/princesse.tscn" type="PackedScene" id=7]
+[ext_resource path="res://game2/scenes/princesse copy.tscn" type="PackedScene" id=7]
 
 [node name="Niveau xxx" type="Node2D"]
 
@@ -49,23 +49,23 @@ position = Vector2( 1785.37, 273.789 )
 
 [node name="Piece" parent="." instance=ExtResource( 4 )]
 position = Vector2( -71.1969, 455.618 )
-frame = 6
+frame = 9
 
 [node name="Piece2" parent="." instance=ExtResource( 4 )]
 position = Vector2( 116.731, 455.136 )
-frame = 0
+frame = 3
 
 [node name="Piece3" parent="." instance=ExtResource( 4 )]
 position = Vector2( 256.229, 457.386 )
-frame = 0
+frame = 3
 
 [node name="Piece4" parent="." instance=ExtResource( 4 )]
 position = Vector2( 213.992, 455.618 )
-frame = 8
+frame = 1
 
 [node name="Piece5" parent="." instance=ExtResource( 4 )]
 position = Vector2( 158.449, 454.667 )
-frame = 9
+frame = 2
 
 [node name="Ennemi" parent="." instance=ExtResource( 5 )]
 position = Vector2( 450.235, 242.721 )
@@ -83,7 +83,7 @@ position = Vector2( 1361.14, 359.893 )
 position = Vector2( 999.397, 429.305 )
 
 [node name="Sprite" parent="." instance=ExtResource( 6 )]
-position = Vector2( 77.132, 456.058 )
+position = Vector2( 64.472, 455.018 )
 
 [node name="Princesse" parent="." instance=ExtResource( 7 )]
-position = Vector2( 11.3383, 447.708 )
+position = Vector2( -34.2263, 450.5 )

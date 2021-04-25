@@ -12,6 +12,7 @@ onready var niveau4 = preload("res://game2/scenes/Niveaux/Niveau_Olgaline.tscn")
 onready var niveaux = [niveau1,niveau2,niveau3,niveau4]
 
 
+
 var level
 var princessePoints = 0
 var princesseVie = 3
@@ -41,16 +42,19 @@ func _leave_game() -> void:
 	world._loader_start( 1 )
 	queue_free()
 
-func changeNiveau():
-			
+func changeNiveau():		
 	level += 1
 	add_child(niveaux[level])
-	remove_child(niveaux[level-1])
+	remove_child(get_child(0))
+		
 	var GUIScript = get_tree().get_root().find_node("GUI",true, false)
 	GUIScript.change_valPoints(princessePoints)
 	print("points :",princessePoints)
 	
-	
+func razNiveau():
+	remove_child(niveaux[level])
+	add_child(niveaux[level])
+
 	
 	# else :
 	# 	var _ignore= get_tree().change_scene("res://arcade/arcade.tscn")

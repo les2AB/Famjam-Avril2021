@@ -1,5 +1,8 @@
 extends CanvasLayer
 
+onready var coeurPlein = preload("res://game2/img/coeurs/coeur plein.png")
+onready var coeurVide = preload("res://game2/img/coeurs/coeur vide.png")
+onready var vies = get_node("Vies").get_children()
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -10,3 +13,6 @@ func change_valPoints(pieces):
 	$Points_score.text = str(pieces)
 	#$Points_score.update()
 	
+func changeVie(vie):
+	print("vie :",vie)
+
