@@ -9,10 +9,10 @@
 config_version=4
 
 _global_script_classes=[ {
-"base": "Control",
+"base": "Reference",
 "class": "EnnemiAudioControl",
 "language": "GDScript",
-"path": "res://game2/scenes/EnnemiAudioControl.gd"
+"path": "res://game2/scripts/EnnemiAudioControl.gd"
 } ]
 _global_script_class_icons={
 "EnnemiAudioControl": ""
