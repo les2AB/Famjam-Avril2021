@@ -9,7 +9,7 @@
 config_version=4
 
 _global_script_classes=[ {
-"base": "Reference",
+"base": "Control",
 "class": "EnnemiAudioControl",
 "language": "GDScript",
 "path": "res://game2/scripts/EnnemiAudioControl.gd"
@@ -25,6 +25,10 @@ config/description="Inspiré de KidPaddle/GameOver, un jeu créé lors du FamJam
 Avril 2021"
 run/main_scene="res://world.tscn"
 config/icon="res://ico.png"
+
+[autoload]
+
+GlobalGame2="*res://game2/scripts/GlobalGame2.gd"
 
 [display]
 

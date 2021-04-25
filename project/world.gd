@@ -1,6 +1,7 @@
 extends Control
 
 
+
 const LOADER_1 = preload("res://loader1/loader_1.tscn")
 const LOADERS  = [LOADER_1]
 
@@ -9,7 +10,6 @@ const GAME_2 = preload("res://game2/Accueil.tscn")
 const GAMES  = [GAME_1, GAME_2]
 
 var arcade = preload("res://arcade/arcade.tscn")
-
 
 # Point d'entré du jeu. Ouvre le splash_screen d'accueil.
 func _ready():
@@ -45,3 +45,4 @@ func on_game_start( id:int ) -> void:
 	# chargement de la scène game_ID
 	# add_child(game01.instance()) bugue donc remplacé par :
 	call_deferred("add_child", game.instance())
+

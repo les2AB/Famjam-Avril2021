@@ -1,32 +1,19 @@
 extends Node2D
 
-#onready var gameNode = get_tree().get_root().get_node("game_2bis")
 
 onready var world = get_parent()
 #onready var Niveau = get_node("Niveau")
-onready var niveau1 = preload("res://game2/scenes/Niveaux/Niveau_Bruno.tscn").instance()
-onready var niveau2 = preload("res://game2/scenes/Niveaux/Niveau_eloise.tscn").instance()
-onready var niveau3 = preload("res://game2/scenes/Niveaux/Niveau_thilou.tscn").instance()
-onready var niveau4 = preload("res://game2/scenes/Niveaux/Niveau_Olgaline.tscn").instance()
-
-onready var niveaux = [niveau1,niveau2,niveau3,niveau4]
+onready var niveau1 = preload("res://game2/scenes/Niveaux/Niveau_Bruno.tscn")
 
 
-
-var level
-var princessePoints = 0
-var princesseVie = 3
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	level = 0
-	add_child(niveaux[level])
+	GlobalGame2.princessePoints = 0
+	GlobalGame2.princesseVie = 3
+	GlobalGame2.level = 0
+	get_tree().change_scene_to(niveau1)
 	
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
 
 
 func _input(event):
@@ -41,20 +28,3 @@ func _input(event):
 func _leave_game() -> void:
 	world._loader_start( 1 )
 	queue_free()
-
-func changeNiveau():		
-	level += 1
-	add_child(niveaux[level])
-	remove_child(get_child(0))
-		
-	var GUIScript = get_tree().get_root().find_node("GUI",true, false)
-	GUIScript.change_valPoints(princessePoints)
-	print("points :",princessePoints)
-	
-func razNiveau():
-	remove_child(niveaux[level])
-	add_child(niveaux[level])
-
-	
-	# else :
-	# 	var _ignore= get_tree().change_scene("res://arcade/arcade.tscn")

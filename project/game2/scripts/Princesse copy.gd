@@ -17,13 +17,14 @@ const GRAVITY = 980
 onready var audio_control= get_node("Princesse_Audio")
 
 # noeud principal du jeu
-onready var gameNode = get_tree().get_root().get_node("game_2bis")
+onready var gameNode = get_tree().get_root().find_node("game_2bis",true, false)
 
 #interface
 onready var GUI = get_tree().get_root().find_node("GUI",true, false)
 
 # export (int) var speed : int = 150
 # export (int) var jump_force = -300
+
 
 
 var screen_size : Vector2
@@ -123,11 +124,11 @@ func mourir():
 	$AnimatedSprite.play("meurt")
 	# attendre la fin de l'animation et quitter
 	yield($AnimatedSprite, 'animation_finished')
-	if gameNode.princesseVie == 0:
+	if GlobalGame2.princesseVie == 0:
 		var _ignore= get_tree().change_scene("res://game2/scenes/game_over.tscn")
 	else :
-		gameNode.level -= 1
-		gameNode.changeNiveau()		
+		GlobalGame2.level -= 1
+		GlobalGame2.changeNiveau()		
 		print("retour niveau")
 
 
@@ -155,8 +156,8 @@ func _on_Corps_body_entered(body):
 
 	print (self.name, " : contact corps avec ", body.name)
 	if 'ennemis' in body.get_groups() and is_alive :
-		gameNode.princesseVie -= 1
-		emit_signal("hint",gameNode.princesseVie)
+		GlobalGame2.princesseVie -= 1
+		emit_signal("hint",GlobalGame2.princesseVie)
 	
 		print ("Princesse meurt")
 		mourir()

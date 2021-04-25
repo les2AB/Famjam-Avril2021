@@ -1,12 +1,10 @@
 extends Sprite
 
 
-onready var gameNode = get_tree().get_root().get_node("game_2bis")
-
 signal endLevel()
 
 func _ready():
-	connect("endLevel",gameNode,"changeNiveau")	
+	connect("endLevel",GlobalGame2,"changeNiveau")	
 	
 
 func _on_Area2D_body_entered(body):
