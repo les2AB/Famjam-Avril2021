@@ -20,8 +20,8 @@ _global_script_class_icons={
 
 [application]
 
-config/name="Jeux #1 - Avril 2021"
-config/description="Inspiré de KidPaddle/GameOver, un jeu créé lors du FamJam numéro 1.
+config/name="Jeux #2 - Avril 2021"
+config/description="Inspiré de KidPaddle/GameOver, un jeu créé lors du FamJam numéro 2.
 Avril 2021"
 run/main_scene="res://world.tscn"
 config/icon="res://ico.png"

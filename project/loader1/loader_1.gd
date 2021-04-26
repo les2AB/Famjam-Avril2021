@@ -3,10 +3,10 @@
 extends Control
 
 
-onready var consigne  = $Consigne
-onready var barre     = $Barre
-onready var game_over = $Control/Game_over
-onready var again     = $Control/Game_over_again
+onready var barre	  = $Barre
+onready var consigne  = $CenterContainer/Consigne
+onready var game_over = $CenterContainer/Game_over
+onready var again     = $CenterContainer/Game_over_again
 onready var music     = $Musique
 onready var rire      = $Rire
 
