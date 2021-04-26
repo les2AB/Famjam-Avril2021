@@ -354,11 +354,6 @@ animations = [ {
 "name": "marche",
 "speed": 36.0
 }, {
-"frames": [  ],
-"loop": true,
-"name": "court",
-"speed": 15.0
-}, {
 "frames": [ SubResource( 36 ), SubResource( 37 ), SubResource( 38 ), SubResource( 39 ), SubResource( 40 ), SubResource( 41 ), SubResource( 42 ), SubResource( 43 ), SubResource( 44 ), SubResource( 45 ), SubResource( 46 ), SubResource( 47 ) ],
 "loop": false,
 "name": "attaque",
@@ -372,6 +367,11 @@ animations = [ {
 "frames": [ SubResource( 56 ), SubResource( 57 ), SubResource( 58 ), SubResource( 59 ), SubResource( 60 ), SubResource( 61 ), SubResource( 62 ), SubResource( 63 ), SubResource( 64 ) ],
 "loop": true,
 "name": "saute",
+"speed": 15.0
+}, {
+"frames": [  ],
+"loop": true,
+"name": "court",
 "speed": 15.0
 } ]
 
@@ -444,7 +444,7 @@ offset = Vector2( 2048, 0 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 65 )
 animation = "idle"
-frame = 2
+frame = 4
 playing = true
 
 [node name="Corps" type="Area2D" parent="."]
