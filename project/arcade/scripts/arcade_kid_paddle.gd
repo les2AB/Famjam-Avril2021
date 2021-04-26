@@ -3,6 +3,7 @@ extends KinematicBody2D
 
 
 onready var audio_pas:AudioStreamPlayer2D = $Audio_pas_01
+onready var joystick= get_parent().get_node("Joystick/Joystick_button")
 
 
 # vitesse de déplacement
@@ -21,43 +22,21 @@ func _ready():
 
 
 func _physics_process(_delta):
-	# if Input.is_action_pressed("ui_right"):
-	# 	audio_pas.stream_paused = false
-	# 	$AnimatedSprite.flip_h = false
-	# 	$AnimatedSprite.play("walk")
-	# 	motion.x = SPEED
-	# elif Input.is_action_pressed("ui_left"):
-	# 	audio_pas.stream_paused = false
-	# 	$AnimatedSprite.flip_h = true
-	# 	$AnimatedSprite.play("walk")
-	# 	motion.x = -SPEED
-	# elif Input.is_action_pressed("ui_up"):
-	# 	audio_pas.stream_paused = false
-	# 	$AnimatedSprite.play("walk")
-	# 	motion.y = -SPEED
-	# elif Input.is_action_pressed("ui_down"):
-	# 	audio_pas.stream_paused = false
-	# 	$AnimatedSprite.play("walk")
-	# 	motion.y = SPEED	
-	# else:
-	# 	audio_pas.stream_paused = true
-	# 	motion.x = 0
-	# 	motion.y = 0
-	# 	$AnimatedSprite.play("idle")
-	# 	pass
+	var joystick_seuil = 0.5
+	var joystick_value = joystick.get_value()
 		
 	motion.x = 0
 	motion.y = 0
 
-	if Input.is_action_pressed("ui_right"):
+	if Input.is_action_pressed("ui_right") or joystick_value.x > joystick_seuil:
 		$AnimatedSprite.flip_h = false
 		motion.x = SPEED	
-	if Input.is_action_pressed("ui_left") :
+	if Input.is_action_pressed("ui_left")  or joystick_value.x < -joystick_seuil:
 		$AnimatedSprite.flip_h = true
 		motion.x = -SPEED
-	if Input.is_action_pressed("ui_up") :
+	if Input.is_action_pressed("ui_up")  or joystick_value.y < -joystick_seuil:
 		motion.y = -SPEED
-	if Input.is_action_pressed("ui_down") :
+	if Input.is_action_pressed("ui_down")  or joystick_value.y > joystick_seuil:
 		motion.y = SPEED
 
 	if motion == Vector2(0,0):
