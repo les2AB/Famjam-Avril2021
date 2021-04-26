@@ -10,6 +10,7 @@ export (int) var gravity_down= 1300
 export (int) var max_y= -300
 var bonus_y=0
 const GRAVITY = 980
+const FLOOR_NORMAL = Vector2(0,-1)
 #####
 
 
@@ -17,19 +18,8 @@ const GRAVITY = 980
 onready var audio_control= get_node("Princesse_Audio")
 
 
-# export (int) var speed : int = 150
-# export (int) var jump_force = -300
-
-
 var screen_size : Vector2
- 
-const FLOOR_NORMAL = Vector2(0,-1)
-	
 var is_alive= true
-# var is_ui_key_jump_release
-
-#var points = 0
-#var vie = 3
 
 
 func _ready():
@@ -37,7 +27,7 @@ func _ready():
 
 
 
-func get_control_direction():
+func ui_to_direction():
 	"""
 	retourne un vecteur (x,y) telque :
 	* x =  1 : mouvement à droite
@@ -46,14 +36,24 @@ func get_control_direction():
 	
 	"""
 	var dir:Vector2= Vector2.ZERO
+	# déplacements horizontaux
 	if Input.is_action_pressed("ui_right"):
 		dir.x= 1
 	if Input.is_action_pressed("ui_left"):
 		dir.x= -1
+	# déplacements verticaux
+	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
+		dir.y = 1
+	if Input.is_action_pressed("ui_accept"):
+		dir.y = 2
+	if Input.is_action_just_released("ui_accept"):
+		dir.y = 0
+	
 	return dir
 
 
 var velocity= Vector2()
+
 
 func set_velocity_x(dir):
 	# gestion des vitesses horizontale
@@ -74,6 +74,15 @@ func set_velocity_y(delta):
 	velocity.y += current_gravity * delta
 
 
+func adjust_velocity_y(dir):
+	if dir.y == 1:
+		start_jumping()
+	elif dir.y == 2: 
+		keep_jumping()
+	elif dir.y == 0:
+		cut_jumping()
+	
+
 # gestion du saut
 func start_jumping():
 	velocity.y -= impulsion
@@ -88,15 +97,6 @@ func cut_jumping():
 	velocity.y= max(50, velocity.y)
 
 	
-func get_control_jump():
-	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
-		start_jumping()
-	if Input.is_action_pressed("ui_accept"):
-		keep_jumping()
-	if Input.is_action_just_released("ui_accept"):
-		cut_jumping()
-
-
 func play_animation(dir):
 	if dir.x == 1:
 		$AnimatedSprite.play("marche")
@@ -126,11 +126,11 @@ func _physics_process(delta):
 	if not is_alive:
 		return
 		
-	var direction= get_control_direction()
+	var direction= ui_to_direction()
 
 	set_velocity_x(direction)
 	set_velocity_y(delta)
-	get_control_jump()
+	adjust_velocity_y(direction)
 	play_animation(direction)
 
 	var _ignore = move_and_slide(velocity, Vector2(0,-1))
