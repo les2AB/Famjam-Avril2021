@@ -25,7 +25,7 @@ autoplay = true
 [node name="YSort" type="YSort" parent="."]
 
 [node name="KidPaddle" parent="YSort" instance=ExtResource( 1 )]
-position = Vector2( 127.173, 309.02 )
+position = Vector2( 76.2038, 299.581 )
 
 [node name="BorneJeu2" parent="YSort" instance=ExtResource( 2 )]
 position = Vector2( 647.459, 411.793 )
