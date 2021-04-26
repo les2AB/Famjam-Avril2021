@@ -48,4 +48,4 @@ shape = SubResource( 2 )
 
 [node name="GUI" type="CanvasLayer" parent="."]
 
-[node name="Joystick" parent="." instance=ExtResource( 10 )]
+[node name="Joystick" parent="GUI" instance=ExtResource( 10 )]
