@@ -44,7 +44,7 @@ func ui_to_direction():
 	# déplacements verticaux
 	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
 		dir.y = 1
-	if Input.is_action_pressed("ui_accept"):
+	elif Input.is_action_pressed("ui_accept"):
 		dir.y = 2
 	if Input.is_action_just_released("ui_accept"):
 		dir.y = 0
