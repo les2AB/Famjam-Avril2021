@@ -9,49 +9,49 @@
 [ext_resource path="res://assets/fonts/joystix monospace.ttf" type="DynamicFontData" id=7]
 [ext_resource path="res://loader1/img/progressBar.png" type="Texture" id=8]
 
-[sub_resource type="DynamicFont" id=8]
-size = 50
-outline_size = 3
-outline_color = Color( 0.580392, 0, 0.611765, 1 )
-font_data = ExtResource( 7 )
-
-[sub_resource type="AtlasTexture" id=1]
+[sub_resource type="AtlasTexture" id=2]
 flags = 4
 atlas = ExtResource( 8 )
 region = Rect2( 0, 0, 540, 44 )
 
-[sub_resource type="AtlasTexture" id=2]
+[sub_resource type="AtlasTexture" id=3]
 flags = 4
 atlas = ExtResource( 8 )
 region = Rect2( 0, 44, 540, 44 )
 
-[sub_resource type="AtlasTexture" id=3]
+[sub_resource type="AtlasTexture" id=4]
 flags = 4
 atlas = ExtResource( 8 )
 region = Rect2( 0, 88, 540, 44 )
 
-[sub_resource type="AtlasTexture" id=4]
+[sub_resource type="AtlasTexture" id=5]
 flags = 4
 atlas = ExtResource( 8 )
 region = Rect2( 0, 132, 540, 44 )
 
-[sub_resource type="AtlasTexture" id=5]
+[sub_resource type="AtlasTexture" id=6]
 flags = 4
 atlas = ExtResource( 8 )
 region = Rect2( 0, 176, 540, 44 )
 
-[sub_resource type="AtlasTexture" id=6]
+[sub_resource type="AtlasTexture" id=7]
 flags = 4
 atlas = ExtResource( 8 )
 region = Rect2( 0, 220, 540, 44 )
 
-[sub_resource type="SpriteFrames" id=7]
+[sub_resource type="SpriteFrames" id=8]
 animations = [ {
-"frames": [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ), SubResource( 4 ), SubResource( 5 ), SubResource( 6 ) ],
+"frames": [ SubResource( 2 ), SubResource( 3 ), SubResource( 4 ), SubResource( 5 ), SubResource( 6 ), SubResource( 7 ) ],
 "loop": false,
 "name": "default",
 "speed": 5.0
 } ]
+
+[sub_resource type="DynamicFont" id=1]
+size = 50
+outline_size = 3
+outline_color = Color( 0.580392, 0, 0.611765, 1 )
+font_data = ExtResource( 7 )
 
 [node name="Control" type="Control"]
 anchor_right = 1.0
@@ -74,11 +74,19 @@ autoplay = true
 stream = ExtResource( 6 )
 volume_db = -20.0
 
+[node name="Barre" type="AnimatedSprite" parent="."]
+position = Vector2( 511, 301 )
+frames = SubResource( 8 )
+frame = 5
+
 [node name="CenterContainer" type="CenterContainer" parent="."]
 margin_left = 129.0
 margin_top = 69.0
 margin_right = 894.0
 margin_bottom = 531.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Consigne" type="Label" parent="CenterContainer"]
 margin_left = 145.0
@@ -108,7 +116,7 @@ margin_top = 169.0
 margin_right = 649.0
 margin_bottom = 292.0
 theme = ExtResource( 5 )
-custom_fonts/font = SubResource( 8 )
+custom_fonts/font = SubResource( 1 )
 text = "Recommencer ?
 (o/n)"
 align = 1
@@ -116,9 +124,5 @@ valign = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
-
-[node name="Barre" type="AnimatedSprite" parent="."]
-position = Vector2( 511, 301 )
-frames = SubResource( 7 )
-frame = 5
 [connection signal="animation_finished" from="Barre" to="." method="_on_Barre_animation_finished"]
+[connection signal="gui_input" from="CenterContainer" to="." method="_on_CenterContainer_gui_input"]

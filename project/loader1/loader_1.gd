@@ -117,7 +117,7 @@ func _scroll_end_text():
 
 
 func _input(event):
-	if event is InputEventKey and event.is_pressed():
+	if event is InputEventKey and event.is_pressed() :
 		var letter = event.scancode
 		if state == State.PLAYING:
 			if letter == KEY_Q:
@@ -135,3 +135,14 @@ func _input(event):
 			if letter == KEY_N:
 				_show_end_text()
 
+			
+
+
+func _on_CenterContainer_gui_input(event):
+	if event is InputEventMouseButton:
+		if state == State.PLAYING:
+			_leave_barre()
+		elif state == State.WAITING:
+			var _ignore = get_tree().reload_current_scene()
+
+		
