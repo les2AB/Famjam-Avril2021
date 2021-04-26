@@ -34,16 +34,12 @@ const FLOOR_NORMAL = Vector2(0,-1)
 var is_alive= true
 # var is_ui_key_jump_release
 
-#var points = 0
-#var vie = 3
 
-signal hint(vie)
 
 func _ready():
 	add_to_group('princesse')
 	self.screen_size = get_viewport_rect().size
-	connect("hint",GUI,"changeVie")
-
+	
 
 
 func get_control_direction():
@@ -128,8 +124,8 @@ func mourir():
 		var _ignore= get_tree().change_scene("res://game2/scenes/game_over.tscn")
 	else :
 		GlobalGame2.level -= 1
-		GlobalGame2.changeNiveau()		
-		print("retour niveau")
+		GlobalGame2.chargeNiveau()		
+		
 
 
 func _physics_process(delta):
@@ -157,8 +153,6 @@ func _on_Corps_body_entered(body):
 	print (self.name, " : contact corps avec ", body.name)
 	if 'ennemis' in body.get_groups() and is_alive :
 		GlobalGame2.princesseVie -= 1
-		emit_signal("hint",GlobalGame2.princesseVie)
-	
 		print ("Princesse meurt")
 		mourir()
 

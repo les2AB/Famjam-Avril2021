@@ -2,7 +2,6 @@ extends Node2D
 
 
 onready var world = get_parent()
-#onready var Niveau = get_node("Niveau")
 onready var niveau1 = preload("res://game2/scenes/Niveaux/Niveau_Bruno.tscn")
 
 
@@ -11,8 +10,9 @@ onready var niveau1 = preload("res://game2/scenes/Niveaux/Niveau_Bruno.tscn")
 func _ready():
 	GlobalGame2.princessePoints = 0
 	GlobalGame2.princesseVie = 3
-	GlobalGame2.level = 0
-	get_tree().change_scene_to(niveau1)
+	GlobalGame2.level = -1
+	GlobalGame2.chargeNiveau()
+
 	
 
 

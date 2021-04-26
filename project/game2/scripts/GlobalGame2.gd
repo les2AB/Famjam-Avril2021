@@ -13,10 +13,9 @@ var princesseVie
 var level
 
 
-func changeNiveau():		
+func chargeNiveau():		
 	level += 1
 	var niveau = niveaux[level]
 	var _ignore = get_tree().change_scene_to(niveau)
-	var GUI = get_tree().get_root().find_node("GUI",true, false)
-	GUI.change_valPoints(princessePoints)
+		
 	print("points :",princessePoints)
