@@ -9,6 +9,7 @@
 radius = 35.0
 
 [node name="Joystick" type="Sprite"]
+position = Vector2( 100, 500 )
 texture = ExtResource( 1 )
 script = ExtResource( 2 )
 __meta__ = {
