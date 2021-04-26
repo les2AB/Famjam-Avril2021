@@ -24,6 +24,7 @@ var is_alive= true
 
 func _ready():
 	self.screen_size = get_viewport_rect().size
+	add_to_group('princesse')
 
 
 
@@ -111,11 +112,17 @@ func play_animation(dir):
 
 
 func mourir():
+	GlobalGame2.princessePoints = 0
 	is_alive= false
 	$AnimatedSprite.play("meurt")
 	# attendre la fin de l'animation et quitter
 	yield($AnimatedSprite, 'animation_finished')
-	var _ignore= get_tree().change_scene("res://game2/scenes/game_over.tscn")
+	# var _ignore= get_tree().change_scene("res://game2/scenes/game_over.tscn")
+	if GlobalGame2.princesseVie == 0:
+		var _ignore= get_tree().change_scene("res://game2/scenes/game_over.tscn")
+	else :
+		GlobalGame2.level -= 1
+		GlobalGame2.chargeNiveau()
 
 
 func _physics_process(delta):
@@ -141,7 +148,11 @@ func _on_Corps_body_entered(body):
 		return
 
 	print (self.name, " : contact corps avec ", body.name)
-	if 'ennemis' in body.get_groups():
+	# if 'ennemis' in body.get_groups():
+	# 	print ("Princesse meurt")
+	# 	mourir()
+	if 'ennemis' in body.get_groups() and is_alive :
+		GlobalGame2.princesseVie -= 1
 		print ("Princesse meurt")
 		mourir()
 

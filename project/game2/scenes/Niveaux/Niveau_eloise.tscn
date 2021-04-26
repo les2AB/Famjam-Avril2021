@@ -3,10 +3,11 @@
 [ext_resource path="res://game2/scenes/musiques.tscn" type="PackedScene" id=1]
 [ext_resource path="res://game2/img/tuiles/tuiles_Plateformes.tres" type="TileSet" id=2]
 [ext_resource path="res://game2/img/tuiles/tuiles_Sol.tres" type="TileSet" id=3]
-[ext_resource path="res://game2/scenes/exit_bis.tscn" type="PackedScene" id=4]
+[ext_resource path="res://game2/scenes/exit.tscn" type="PackedScene" id=4]
 [ext_resource path="res://game2/scenes/ennemi.tscn" type="PackedScene" id=5]
-[ext_resource path="res://game2/scenes/princesse copy.tscn" type="PackedScene" id=6]
+[ext_resource path="res://game2/scenes/princesse.tscn" type="PackedScene" id=6]
 [ext_resource path="res://game2/scenes/piece.tscn" type="PackedScene" id=7]
+
 
 [node name="Niveau1" type="Node2D"]
 
@@ -34,75 +35,73 @@ tile_data = PoolIntArray( 917619, 2, 0, 917620, 2, 0, 917621, 2, 0, 917622, 2, 0
 
 [node name="Piece" parent="." instance=ExtResource( 7 )]
 position = Vector2( 119.452, 479.339 )
-frame = 8
+frame = 2
 
 [node name="Sprite" parent="." instance=ExtResource( 4 )]
 position = Vector2( 2413.61, 477.88 )
 
 [node name="Piece2" parent="." instance=ExtResource( 7 )]
 position = Vector2( 2146.32, 234.875 )
-frame = 6
+frame = 0
 
 [node name="Piece3" parent="." instance=ExtResource( 7 )]
 position = Vector2( 2059.5, 230.118 )
-frame = 3
 
 [node name="Piece4" parent="." instance=ExtResource( 7 )]
 position = Vector2( 2168.91, 387.093 )
-frame = 2
+frame = 6
 
 [node name="Piece5" parent="." instance=ExtResource( 7 )]
 position = Vector2( 1942.96, 415.634 )
-frame = 8
+frame = 2
 
 [node name="Piece6" parent="." instance=ExtResource( 7 )]
 position = Vector2( 2233.13, 470.338 )
-frame = 9
+frame = 3
 
 [node name="Piece7" parent="." instance=ExtResource( 7 )]
 position = Vector2( 1745.43, 250.773 )
-frame = 0
+frame = 4
 
 [node name="Piece8" parent="." instance=ExtResource( 7 )]
 position = Vector2( 1511.69, 459.038 )
-frame = 1
+frame = 5
 
 [node name="Piece9" parent="." instance=ExtResource( 7 )]
 position = Vector2( 1221.02, 472.523 )
-frame = 1
+frame = 5
 
 [node name="Piece10" parent="." instance=ExtResource( 7 )]
 position = Vector2( 1029.54, 198.333 )
-frame = 3
 
 [node name="Piece11" parent="." instance=ExtResource( 7 )]
 position = Vector2( 605.548, 469.526 )
-frame = 3
 
 [node name="Piece12" parent="." instance=ExtResource( 7 )]
 position = Vector2( 295.398, 381.126 )
+frame = 1
 
 [node name="Piece13" parent="." instance=ExtResource( 7 )]
 position = Vector2( 171.039, 415.587 )
-frame = 2
+frame = 6
 
 [node name="Piece14" parent="." instance=ExtResource( 7 )]
 position = Vector2( 448.226, 349.662 )
-frame = 8
+frame = 2
 
 [node name="Piece15" parent="." instance=ExtResource( 7 )]
 position = Vector2( 731.406, 295.723 )
-frame = 1
+frame = 5
 
 [node name="Piece16" parent="." instance=ExtResource( 7 )]
 position = Vector2( 911.203, 424.577 )
-frame = 9
-
-[node name="Princesse" parent="." instance=ExtResource( 6 )]
-position = Vector2( 26.5472, 448.2 )
+frame = 3
 
 [node name="Ennemi" parent="." instance=ExtResource( 5 )]
 position = Vector2( 252.836, 479.382 )
 
 [node name="Ennemi2" parent="." instance=ExtResource( 5 )]
 position = Vector2( 1706.66, 479.761 )
+
+[node name="Princesse" parent="." instance=ExtResource( 6 )]
+position = Vector2( 41.1255, 431.862 )
