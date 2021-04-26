@@ -3,7 +3,7 @@ extends KinematicBody2D
 
 
 onready var audio_pas:AudioStreamPlayer2D = $Audio_pas_01
-onready var joystick= get_parent().get_node("Joystick/Joystick_button")
+onready var joystick= get_parent().get_node("Joystick")
 
 
 # vitesse de déplacement
