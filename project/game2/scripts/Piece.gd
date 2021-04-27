@@ -9,7 +9,7 @@ func _ready():
 
 
 func _on_Area2D_body_entered(body):
-	var GUIScript = get_tree().get_root().find_node("GUI",true, false)
+	var GUIScript = get_tree().get_root().find_node("GUI_score_vie",true, false)
 	if body == self or body.is_in_group('ennemis'):
 		return
 	var son= audio_pieces[ randi() % len(audio_pieces) ]
