@@ -50,6 +50,9 @@ func ui_to_direction():
 		dir.x= 1
 	if Input.is_action_pressed("ui_left") or joystick_value.x < -joystick_seuil:
 		dir.x= -1
+
+
+
 	# déplacements verticaux
 	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
 		dir.y = 1
@@ -57,6 +60,16 @@ func ui_to_direction():
 		dir.y = 2
 	if Input.is_action_just_released("ui_accept"):
 		dir.y = 0
+	
+	# déplacements verticaux
+	if joystick_value.y != 0:
+		if joystick_value.y < -joystick_seuil and is_on_floor():
+			dir.y = 1
+		elif joystick_value.y < -joystick_seuil:
+			dir.y = 2
+		if joystick_value.y > -joystick_seuil:
+			dir.y = 0
+	
 	
 	return dir
 
