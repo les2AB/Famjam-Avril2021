@@ -1,6 +1,6 @@
 [gd_scene load_steps=85 format=2]
 
-[ext_resource path="res://game2/scripts/Princesse copy.gd" type="Script" id=1]
+[ext_resource path="res://game2/_old/Princesse copy.gd" type="Script" id=1]
 [ext_resource path="res://game2/img/princesse/prin-marche_sheet.png" type="Texture" id=2]
 [ext_resource path="res://game2/img/backgrounds/fond_proche_2048x480.png" type="Texture" id=3]
 [ext_resource path="res://game2/img/princesse/prin-attack_sheet.png" type="Texture" id=4]
@@ -16,6 +16,7 @@
 [ext_resource path="res://game2/sounds/jump/bruit saut 3.ogg" type="AudioStream" id=14]
 [ext_resource path="res://game2/scripts/PrincesseAudioControl.gd" type="Script" id=15]
 [ext_resource path="res://game2/scenes/GUI.tscn" type="PackedScene" id=16]
+
 
 [sub_resource type="AtlasTexture" id=1]
 flags = 4
