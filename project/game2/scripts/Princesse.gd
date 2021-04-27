@@ -17,6 +17,11 @@ const FLOOR_NORMAL = Vector2(0,-1)
 # controleur de sons de la princesse
 onready var audio_control= get_node("Princesse_Audio")
 
+#joystick
+
+
+
+
 
 var screen_size : Vector2
 var is_alive= true
