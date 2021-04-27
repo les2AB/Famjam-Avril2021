@@ -112,6 +112,7 @@ func play_animation(dir):
 
 
 func mourir():
+	GlobalGame2.princesseVie -= 1
 	GlobalGame2.princessePoints = 0
 	is_alive= false
 	$AnimatedSprite.play("meurt")
@@ -127,20 +128,20 @@ func mourir():
 
 func _physics_process(delta):
 	# cas de la chute mortelle
-	if velocity.y > 2000:
-		mourir()
+	if is_alive:
+		if velocity.y > 2000:
+			mourir()
+	
 
-	if not is_alive:
-		return
-		
-	var direction= ui_to_direction()
+	if is_alive:		
+		var direction= ui_to_direction()
 
-	set_velocity_x(direction)
-	set_velocity_y(delta)
-	adjust_velocity_y(direction)
-	play_animation(direction)
+		set_velocity_x(direction)
+		set_velocity_y(delta)
+		adjust_velocity_y(direction)
+		play_animation(direction)
 
-	var _ignore = move_and_slide(velocity, Vector2(0,-1))
+		var _ignore = move_and_slide(velocity, Vector2(0,-1))
 
 
 func _on_Corps_body_entered(body):
@@ -152,7 +153,6 @@ func _on_Corps_body_entered(body):
 	# 	print ("Princesse meurt")
 	# 	mourir()
 	if 'ennemis' in body.get_groups() and is_alive :
-		GlobalGame2.princesseVie -= 1
 		print ("Princesse meurt")
 		mourir()
 
@@ -161,4 +161,3 @@ func _on_Tete_body_entered(body:Node):
 	if body != self:
 		print (self.name, " : contact tete avec ", body.name)
 		cut_jumping()
-
