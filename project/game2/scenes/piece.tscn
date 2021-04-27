@@ -6,7 +6,6 @@
 [ext_resource path="res://game2/sounds/pieces/bruit de pièce 2.ogg" type="AudioStream" id=4]
 [ext_resource path="res://game2/sounds/pieces/bruit de pièce 1.ogg" type="AudioStream" id=5]
 
-
 [sub_resource type="AtlasTexture" id=1]
 flags = 4
 atlas = ExtResource( 1 )
@@ -70,7 +69,7 @@ radius = 8.82864
 
 [node name="Piece" type="AnimatedSprite"]
 frames = SubResource( 11 )
-frame = 7
+frame = 9
 playing = true
 script = ExtResource( 2 )
 
