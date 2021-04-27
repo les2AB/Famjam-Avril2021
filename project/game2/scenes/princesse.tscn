@@ -417,6 +417,10 @@ current = true
 zoom = Vector2( 0.3, 0.3 )
 drag_margin_h_enabled = true
 drag_margin_v_enabled = true
+drag_margin_left = 0.4
+drag_margin_top = 0.4
+drag_margin_right = 0.4
+drag_margin_bottom = 0.4
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="Camera2D"]
 offset = Vector2( 0, 250 )
@@ -491,7 +495,7 @@ flip_h = true
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 65 )
 animation = "idle"
-frame = 3
+frame = 2
 playing = true
 
 [node name="Corps" type="Area2D" parent="."]
