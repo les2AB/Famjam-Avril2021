@@ -49,22 +49,21 @@ position = Vector2( 1785.37, 273.789 )
 
 [node name="Piece" parent="." instance=ExtResource( 4 )]
 position = Vector2( -71.1969, 455.618 )
-frame = 5
+frame = 3
 
 [node name="Piece2" parent="." instance=ExtResource( 4 )]
 position = Vector2( 116.731, 455.136 )
-frame = 9
 
 [node name="Piece3" parent="." instance=ExtResource( 4 )]
 position = Vector2( 256.229, 457.386 )
-frame = 9
 
 [node name="Piece4" parent="." instance=ExtResource( 4 )]
 position = Vector2( 213.992, 455.618 )
+frame = 5
 
 [node name="Piece5" parent="." instance=ExtResource( 4 )]
 position = Vector2( 158.449, 454.667 )
-frame = 8
+frame = 6
 
 [node name="Ennemi" parent="." instance=ExtResource( 5 )]
 position = Vector2( 450.235, 242.721 )

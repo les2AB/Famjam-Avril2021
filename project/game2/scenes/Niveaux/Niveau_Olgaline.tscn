@@ -3,7 +3,8 @@
 [ext_resource path="res://game2/scenes/musiques.tscn" type="PackedScene" id=1]
 [ext_resource path="res://game2/img/tuiles/tuiles_Plateformes.tres" type="TileSet" id=2]
 [ext_resource path="res://game2/img/tuiles/tuiles_Sol.tres" type="TileSet" id=3]
-[ext_resource path="res://game2/scenes/_exit.tscn" type="PackedScene" id=5]
+[ext_resource path="res://game2/_old/_exit.tscn" type="PackedScene" id=5]
+
 
 
 [node name="Niveau xxx" type="Node2D"]
