@@ -2,6 +2,7 @@ extends Node2D
 
 onready var joystick_button = get_node("Joystick_button")
 
+
 const FRONTIERE= 55
 const TOP_OFFSET= Vector2(32,32)
 const RETURN_ACCEL= 20

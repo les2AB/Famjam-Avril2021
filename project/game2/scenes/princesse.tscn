@@ -1,4 +1,4 @@
-[gd_scene load_steps=85 format=2]
+[gd_scene load_steps=86 format=2]
 
 [ext_resource path="res://game2/scripts/Princesse.gd" type="Script" id=1]
 [ext_resource path="res://game2/img/princesse/prin-marche_sheet.png" type="Texture" id=2]
@@ -15,7 +15,8 @@
 [ext_resource path="res://game2/sounds/jump/bruit saut 2.ogg" type="AudioStream" id=13]
 [ext_resource path="res://game2/sounds/jump/bruit saut 3.ogg" type="AudioStream" id=14]
 [ext_resource path="res://game2/scripts/PrincesseAudioControl.gd" type="Script" id=15]
-[ext_resource path="res://game2/scenes/GUI.tscn" type="PackedScene" id=16]
+[ext_resource path="res://game2/scenes/GUI_score_vie.tscn" type="PackedScene" id=16]
+[ext_resource path="res://shared_scenes/joystick.tscn" type="PackedScene" id=17]
 
 [sub_resource type="AtlasTexture" id=1]
 flags = 4
@@ -444,7 +445,7 @@ offset = Vector2( 2048, 0 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 65 )
 animation = "idle"
-frame = 4
+frame = 3
 playing = true
 
 [node name="Corps" type="Area2D" parent="."]
@@ -459,10 +460,14 @@ shape = SubResource( 66 )
 position = Vector2( -3.00804, -10.0866 )
 shape = SubResource( 67 )
 
-[node name="GUI" parent="." instance=ExtResource( 16 )]
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( -1.70018, 4.352 )
 shape = SubResource( 68 )
+
+[node name="GUI" type="CanvasLayer" parent="."]
+
+[node name="GUI_score_vie" parent="GUI" instance=ExtResource( 16 )]
+
+[node name="Joystick" parent="GUI" instance=ExtResource( 17 )]
 [connection signal="body_entered" from="Corps" to="." method="_on_Corps_body_entered"]
 [connection signal="body_entered" from="Tete" to="." method="_on_Tete_body_entered"]
