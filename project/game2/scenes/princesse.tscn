@@ -419,7 +419,9 @@ drag_margin_h_enabled = true
 drag_margin_v_enabled = true
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="Camera2D"]
-scroll_base_offset = Vector2( 0, 200 )
+offset = Vector2( 0, 250 )
+scale = Vector2( 0.6, 0.6 )
+transform = Transform2D( 0.6, 0, 0, 0.6, 0, 250 )
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="Camera2D/ParallaxBackground"]
 motion_scale = Vector2( 0.3, 0.3 )
@@ -427,6 +429,33 @@ motion_scale = Vector2( 0.3, 0.3 )
 [node name="Sprite" type="Sprite" parent="Camera2D/ParallaxBackground/ParallaxLayer"]
 position = Vector2( -0.185688, -0.111362 )
 texture = ExtResource( 6 )
+
+[node name="Sprite5" type="Sprite" parent="Camera2D/ParallaxBackground/ParallaxLayer"]
+position = Vector2( -2047, 0 )
+texture = ExtResource( 6 )
+flip_h = true
+
+[node name="Sprite6" type="Sprite" parent="Camera2D/ParallaxBackground/ParallaxLayer"]
+position = Vector2( -2047, 479 )
+texture = ExtResource( 6 )
+flip_h = true
+flip_v = true
+
+[node name="Sprite2" type="Sprite" parent="Camera2D/ParallaxBackground/ParallaxLayer"]
+position = Vector2( 2044.35, 0 )
+texture = ExtResource( 6 )
+flip_h = true
+
+[node name="Sprite3" type="Sprite" parent="Camera2D/ParallaxBackground/ParallaxLayer"]
+position = Vector2( 0, 479 )
+texture = ExtResource( 6 )
+flip_v = true
+
+[node name="Sprite4" type="Sprite" parent="Camera2D/ParallaxBackground/ParallaxLayer"]
+position = Vector2( 2047, 479 )
+texture = ExtResource( 6 )
+flip_h = true
+flip_v = true
 
 [node name="ParallaxLayer2" type="ParallaxLayer" parent="Camera2D/ParallaxBackground"]
 motion_scale = Vector2( 0.6, 0.6 )
@@ -442,10 +471,27 @@ offset = Vector2( -2048, 0 )
 texture = ExtResource( 3 )
 offset = Vector2( 2048, 0 )
 
+[node name="Sprite5" type="Sprite" parent="Camera2D/ParallaxBackground/ParallaxLayer2"]
+position = Vector2( 0, 479 )
+texture = ExtResource( 3 )
+flip_h = true
+
+[node name="Sprite6" type="Sprite" parent="Camera2D/ParallaxBackground/ParallaxLayer2"]
+position = Vector2( 0, 479 )
+texture = ExtResource( 3 )
+offset = Vector2( -2048, 0 )
+flip_h = true
+
+[node name="Sprite7" type="Sprite" parent="Camera2D/ParallaxBackground/ParallaxLayer2"]
+position = Vector2( 0, 479 )
+texture = ExtResource( 3 )
+offset = Vector2( 2048, 0 )
+flip_h = true
+
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 65 )
 animation = "idle"
-frame = 5
+frame = 3
 playing = true
 
 [node name="Corps" type="Area2D" parent="."]
