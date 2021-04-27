@@ -2,7 +2,7 @@
 
 [ext_resource path="res://game2/img/pieces/Piece.png" type="Texture" id=1]
 [ext_resource path="res://game2/img/coeurs/coeur vide.png" type="Texture" id=2]
-[ext_resource path="res://game2/scripts/GUI.gd" type="Script" id=3]
+[ext_resource path="res://game2/scripts/GUI_score_vie.gd" type="Script" id=3]
 [ext_resource path="res://assets/fonts/kenney_fontpackage/Fonts/Kenney Mini Square.ttf" type="DynamicFontData" id=4]
 
 [sub_resource type="DynamicFont" id=1]
@@ -17,7 +17,7 @@ use_mipmaps = true
 use_filter = true
 font_data = ExtResource( 4 )
 
-[node name="GUI" type="CanvasLayer"]
+[node name="GUI_Score_Vie" type="CanvasLayer"]
 script = ExtResource( 3 )
 
 [node name="Points_icone" type="TextureRect" parent="."]

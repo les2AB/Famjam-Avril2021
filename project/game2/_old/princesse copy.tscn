@@ -15,7 +15,8 @@
 [ext_resource path="res://game2/sounds/jump/bruit saut 2.ogg" type="AudioStream" id=13]
 [ext_resource path="res://game2/sounds/jump/bruit saut 3.ogg" type="AudioStream" id=14]
 [ext_resource path="res://game2/scripts/PrincesseAudioControl.gd" type="Script" id=15]
-[ext_resource path="res://game2/scenes/GUI.tscn" type="PackedScene" id=16]
+[ext_resource path="res://game2/scenes/GUI_score_vie.tscn" type="PackedScene" id=16]
+
 
 
 [sub_resource type="AtlasTexture" id=1]

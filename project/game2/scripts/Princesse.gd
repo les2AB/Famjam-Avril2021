@@ -16,8 +16,7 @@ const FLOOR_NORMAL = Vector2(0,-1)
 
 # controleur de sons de la princesse
 onready var audio_control= get_node("Princesse_Audio")
-
-#joystick
+onready var joystick= get_node("GUI/Joystick")
 
 
 
@@ -41,11 +40,15 @@ func ui_to_direction():
 	* y =  1 : saute
 	
 	"""
+	## calibrage joystick
+	var joystick_seuil = 0.5
+	var joystick_value = joystick.get_value()
+
 	var dir:Vector2= Vector2.ZERO
 	# déplacements horizontaux
-	if Input.is_action_pressed("ui_right"):
+	if Input.is_action_pressed("ui_right") or joystick_value.x > joystick_seuil:
 		dir.x= 1
-	if Input.is_action_pressed("ui_left"):
+	if Input.is_action_pressed("ui_left") or joystick_value.x < -joystick_seuil:
 		dir.x= -1
 	# déplacements verticaux
 	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
